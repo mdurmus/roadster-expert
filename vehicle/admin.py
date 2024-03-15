@@ -12,7 +12,11 @@ class CommentAdmin(SummernoteModelAdmin):
     search_fields = ('email',)
     list_filter = ('created_on',)
     summernote_fields=('comment')
-    
+    actions = ['approve_comments']
+
+    def approve_comments(self,request,queryset):
+        queryset.update(approved=True)
+
 
 @admin.register(Vehicle)
 class VehicleAdmin(SummernoteModelAdmin):
