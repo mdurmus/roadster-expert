@@ -67,6 +67,7 @@ class VehicleModel(models.Model):
     """
     model = models.CharField(max_length=35, blank=False)
     created_on = models.DateTimeField(auto_now_add=True)
+    brand = models.ForeignKey(VehicleBrand, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name_plural = 'Models'
@@ -80,7 +81,6 @@ class Vehicle(models.Model):
     """
     brand = models.ForeignKey(VehicleBrand, on_delete=models.CASCADE)
     model = models.ForeignKey(VehicleModel, on_delete=models.CASCADE)
-    cabin_type = models.IntegerField(choices = CABIN_TYPE, default=0)
     category = models.ForeignKey(Category, on_delete=models.CASCADE,
                                      related_name='category_vehicle')
     author = models.ForeignKey(Author, on_delete=models.CASCADE,
@@ -102,7 +102,7 @@ class Vehicle(models.Model):
         verbose_name_plural = 'Vehicles'
 
     def __str__(self):
-        return f"Brand: {self.brand} model: {self.model} - created: {self.created_on}"
+        return f"Brand: {self.brand.brand} model: {self.model.model} - created: {self.created_on}"
     
     def like_count(self):
         return self.likes.count()
