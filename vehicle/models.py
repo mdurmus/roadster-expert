@@ -48,16 +48,38 @@ class Author(models.Model):
     def __str__(self):
         return f"{self.user.username} created on {self.created_on}"
 
+class VehicleBrand(models.Model):
+    """
+    Brand of Vehicle objects
+    """
+    brand = models.CharField(max_length=35, blank=False)
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural = 'Brands'
+
+    def __str__(self):
+        return f"Brand: {self.brand}"
+
+class VehicleModel(models.Model):
+    """
+    Model of vehicle objects
+    """
+    model = models.CharField(max_length=35, blank=False)
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural = 'Models'
+
+    def __str__(self):
+       return f"Model: {self.model}"
+
 class Vehicle(models.Model):
     """
     Model for Vehicle objects
     """
-    # Normally, according to normalization rules, the make
-    # and model information should be stored in a separate
-    # table. However, I am using it this way for now so 
-    # that the project does not grow. 
-    brand = models.CharField(max_length=20, blank=False)
-    model = models.CharField(max_length=20, blank=False)
+    brand = models.ForeignKey(VehicleBrand, on_delete=models.CASCADE)
+    model = models.ForeignKey(VehicleModel, on_delete=models.CASCADE)
     cabin_type = models.IntegerField(choices = CABIN_TYPE, default=0)
     category = models.ForeignKey(Category, on_delete=models.CASCADE,
                                      related_name='category_vehicle')
@@ -65,13 +87,14 @@ class Vehicle(models.Model):
                                related_name='vehicle_author')
     title = models.CharField(max_length=200, unique=True, blank=False)
     slug = models.SlugField(max_length=200, unique=True, blank=False)
-    summary = models.TextField()
+    summary = models.TextField(blank=True)
     comment_count = models.IntegerField(default=0)
     created_on = models.DateTimeField(auto_now_add=True)
     content = models.TextField(blank=False)
     featured_image = CloudinaryField('image',default='placeholder')
     status = models.IntegerField(choices=STATUS, default=0)
-    likes = models.ManyToManyField(User,related_name='vehicle_like', blank=True)
+    #likes = models.ManyToManyField(User,related_name='vehicle_like', blank=True)
+    likes = models.ForeignKey(User, on_delete=models.CASCADE, related_name='vehicle_like')
     updated_on = models.DateTimeField(auto_now=True)
 
     class Meta:
@@ -102,6 +125,3 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment: {self.comment[:50]} by: {self.name}"
-
-    class Meta:
-        verbose_name_plural = 'Comments'
