@@ -33,20 +33,20 @@ class Category(models.Model):
     def __str__(self):
         return f"{self.title} created on {self.created_on}"
 
-class Author(models.Model):
-    """
-    Model for Author object
-    """
-    user = models.OneToOneField(User,on_delete=models.CASCADE,
-                                related_name='user_author')
-    created_on = models.DateTimeField(auto_now_add=True)
-    author_picture = CloudinaryField('image', default='placeholder')
+#class Author(models.Model):
+#    """
+#    Model for Author object
+#    """
+#    user = models.OneToOneField(User,on_delete=models.CASCADE,
+#                                related_name='user_author')
+#    created_on = models.DateTimeField(auto_now_add=True)
+#    author_picture = CloudinaryField('image', default='placeholder')#
 
-    class Meta:
-        verbose_name_plural = 'Authors'
+#    class Meta:
+#        verbose_name_plural = 'Authors'
 
-    def __str__(self):
-        return f"{self.user.username} created on {self.created_on}"
+#    def __str__(self):
+#        return f"{self.user.username} created on {self.created_on}"
 
 class VehicleBrand(models.Model):
     """
@@ -83,8 +83,8 @@ class Vehicle(models.Model):
     model = models.ForeignKey(VehicleModel, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE,
                                      related_name='category_vehicle')
-    author = models.ForeignKey(Author, on_delete=models.CASCADE,
-                               related_name='vehicle_author')
+    author = models.ForeignKey(User, on_delete=models.CASCADE,
+                               related_name='vehicle_user')
     title = models.CharField(max_length=200, unique=True, blank=False)
     slug = models.SlugField(max_length=200, unique=True, blank=False)
     summary = models.TextField(blank=True)
