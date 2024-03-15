@@ -12,6 +12,7 @@ class CommentAdmin(SummernoteModelAdmin):
 
 @admin.register(Vehicle)
 class VehicleAdmin(SummernoteModelAdmin):
+    prepopulated_fields = {'slug':('title',)}
     summernote_fields=('summary','content')
 
 admin.site.register(VehicleBrand)
