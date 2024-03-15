@@ -8,15 +8,19 @@ class CategoryAdmin(SummernoteModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(SummernoteModelAdmin):
+    list_display = ('created_on',)
+    search_fields = ('email',)
+    list_filter = ('created_on',)
     summernote_fields=('comment')
+    
 
 @admin.register(Vehicle)
 class VehicleAdmin(SummernoteModelAdmin):
     list_display = ('title','slug','status','created_on')
     search_fields = ('brand','title')
     prepopulated_fields = {'slug':('title',)}
+    list_filter = ('status','created_on')
     summernote_fields=('summary','content')
-    list_display = ('first_name', 'last_name')
 
 admin.site.register(VehicleBrand)
 admin.site.register(VehicleModel)
