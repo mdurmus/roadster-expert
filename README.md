@@ -1,3 +1,12 @@
+Min/max value validator
+email validator
+verbose name validator
+ : https://docs.djangoproject.com/en/5.0/ref/validators/
+
+
+
+
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome,
