@@ -93,8 +93,7 @@ class Vehicle(models.Model):
     content = models.TextField(blank=False)
     featured_image = CloudinaryField('image',default='placeholder')
     status = models.IntegerField(choices=STATUS, default=0)
-    #likes = models.ManyToManyField(User,related_name='vehicle_like', blank=True)
-    likes = models.ForeignKey(User, on_delete=models.CASCADE, related_name='vehicle_like')
+    likes = models.ManyToManyField(User,related_name='vehicle_like', blank=True)
     updated_on = models.DateTimeField(auto_now=True)
 
     class Meta:
