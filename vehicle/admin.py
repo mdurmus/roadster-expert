@@ -11,7 +11,7 @@ class CommentAdmin(SummernoteModelAdmin):
     actions = ['approve_comments']
 
     def short_comment(self, obj):
-        return obj.comment[:50] if obj.comment else ''
+        return obj.comment[:50]+'...' if obj.comment else ''
     short_comment.short_description = 'Comment'
 
     def approve_comments(self,request,queryset):
