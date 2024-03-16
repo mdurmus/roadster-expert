@@ -4,11 +4,15 @@ from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Comment)
 class CommentAdmin(SummernoteModelAdmin):
-    list_display = ('created_on',)
+    list_display = ('name','email','short_comment',)
     search_fields = ('email',)
     list_filter = ('created_on',)
     summernote_fields=('comment')
     actions = ['approve_comments']
+
+    def short_comment(self, obj):
+        return obj.comment[:50] if obj.comment else ''
+    short_comment.short_description = 'Comment'
 
     def approve_comments(self,request,queryset):
         queryset.update(approved=True)
