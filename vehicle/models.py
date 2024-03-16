@@ -31,7 +31,7 @@ class Category(models.Model):
         ordering = ["-created_on"]
 
     def __str__(self):
-        return f"{self.title} created on {self.created_on}"
+        return f"{self.title}"
 
 #class Author(models.Model):
 #    """
@@ -101,7 +101,7 @@ class Vehicle(models.Model):
         verbose_name_plural = 'Vehicles'
 
     def __str__(self):
-        return f"Brand: {self.brand.brand} model: {self.model.model} - created: {self.created_on}"
+        return f"Brand: {self.brand.brand} model: {self.model.model}"
     
     def like_count(self):
         return self.likes.count()

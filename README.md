@@ -1,3 +1,5 @@
+Bug: in admin area search fields didnt work changed in admin py searchfields criteria file will upload.
+
 Min/max value validator
 email validator
 verbose name validator
