@@ -5,7 +5,7 @@ from django_summernote.admin import SummernoteModelAdmin
 @admin.register(Comment)
 class CommentAdmin(SummernoteModelAdmin):
     list_display = ('name','email','short_comment',)
-    search_fields = ('email',)
+    search_fields = ('email','name',)
     list_filter = ('created_on',)
     summernote_fields=('comment')
     actions = ['approve_comments']
