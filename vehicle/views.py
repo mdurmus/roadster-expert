@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import generic, View 
 from .models import *
+from django.db.models import Q
 
 class Home(generic.TemplateView):
     '''
@@ -18,7 +19,6 @@ def search(request):
     if request.POST:
         searched = request.POST["searched"]
         results = Vehicle.objects.filter(Q(title__contains=searched) |
-                                     Q(brand__contains=searched) |
                                      Q(content__contains=searched)
                                     ).distinct()
         context = {'queryset': queryset}
@@ -26,5 +26,4 @@ def search(request):
         return render(request, 'vehicle/search.html', {'results': results, 'searched': searched})
     else:
         return render(request, 'vehicle/search.html', context)
-
 

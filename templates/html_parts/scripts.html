@@ -1,0 +1,23 @@
+{% load static %}
+
+<!-- Jquery -->
+<script src="{js/jquery.js}"></script>
+
+<!--Bootstrap Js-->
+<script src="{% static 'bootstrap/js/bootstrap.min.js'%}"></script>
+
+<!--My custom js-->
+<script src="{% static 'js/my_js.js' %}"></script>
+
+<script>
+    // Settimeout to dismiss the alert box
+    setTimeout(function () {
+        let messages = document.getElementById('alert');
+        let alert = new bootstrap.Alert(messages);
+        alert.close();
+    }, 3500);
+</script>
+
+</body>
+
+</html>

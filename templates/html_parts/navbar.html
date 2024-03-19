@@ -1,214 +1,14 @@
 {% load static %}
 
-<!-- Searchbox section -->
-<section>
-<div id="search-box">
-  <div class="search-nav">
-    <!--I need to add logo image here -->
-    <img
-      src="{% static 'images/logos/roadster_logo_mini.png' %}"
-      alt="Roadster Expert Logo"
-    />
-    <i class="fas fa-times"></i>
-  </div>
-  <div class="container h-100">
-    <div class="row align-items-center h-100">
-      <form
-        action="{% url 'search' %}" method="POST" class="d-flex mx-auto col-md-8">
-        {% csrf_token %}
-        <input class="form-control me-2" type="search" name="searched" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-primary" type="submit">
-          <i class="fas fa-search"></i>
-        </button>
-      </form>
-    </div>
-  </div>
-</div>
-</section>
-<!-- End of searchbox section -->
 
-<!-- NAVBAR -->
+
+<!-- Navbar section -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/"
-      ><img
-      src="{% static 'images/logos/roadster_logo_mini.png' %}"
-      alt="Roadster Expert Logo"
-    /></a>
-    <button
-      class="navbar-toggler box-shadow"
-      style="text-align: center"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <i class="fa fa-bars"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li>
-          <a
-            class="nav-link active"
-            aria-current="page"
-            href="/"
-            aria-label="Go to the home page"
-            >Home</a
-          >
-        </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle active"
-            id="navbarDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Recipes
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li>
-              <a
-                class="dropdown-item"
-                href="/categories"
-                aria-label="Go to the Recipes page"
-                >All Recipes</a
-              >
-            </li>
-            <li>
-              <hr class="dropdown-divider" />
-            </li>
-            {% for category in categories_list %}
-            <li>
-              <a
-                class="dropdown-item"
-                href="{% url 'categories_posts' category.title %}"
-                >{{ category.title }}</a
-              >
-            </li>
-            {% endfor%}
-          </ul>
-        </li>
-        <li>
-          <a
-            class="nav-link active"
-            aria-current="page"
-            href="/about"
-            aria-label="Go to the about page"
-            >About</a
-          >
-        </li>
-        <li>
-          <a
-            class="nav-link active"
-            aria-current="page"
-            href="/blog"
-            aria-label="Go to the blog page"
-            >Blog</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link active"
-            href="/contact"
-            aria-label="Go to the contact page"
-            >Contact</a
-          >
-        </li>
-        {% if user.is_authenticated %}
-        <li class="nav-item">
-            <a class="nav-link active" href="{% url 'challenge' %}" aria-label="Go to the challenge page">Challenge</a>
-        </li>
-        {% endif %}
-      </ul>
-      {% if user.is_authenticated %}
-      <ul class="d-flex login-box">
-        <!-- User authentication -->
-        <li class="nav-item dropdown">
-            {% if user.profile.image %}
-            <a
-              class="nav-link  active"
-              id="navbarDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-                <img
-                class="author-img"
-                src="{{ user.profile.image.url }}"
-                alt="{{ user.username }} Image"/>
-                  
-            </a>
-            {% else %}
-            <a
-              class="nav-link  active"
-              id="navbarDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-                <img
-                    class="author-img"
-                    src="{% static 'images/user_profile_placeholder.jpg' %}"
-                    alt="User Image"
-                />
-            </a>
-            {% endif %}
-            <ul class="dropdown-menu dropdown-menu-profile" aria-labelledby="navbarDropdown">
-                <li>
-                    <a
-                      class="dropdown-item"
-                      href="/profile"
-                      aria-label="Go to the profile page"
-                      >Profile</a
-                    >
-                  </li> 
-                <li>
-                    <a
-                    class="dropdown-item coming-soon"
-                    href="#"
-                    aria-label="Go to the favorite page"
-                    >Favorites (comming Soon)</a
-                    >
-                </li>
-                <li>
-                    <a
-                    class="dropdown-item"
-                    href="{% url 'account_logout' %}"
-                    aria-label="Go to the logout page"
-                    >Logout</a
-                    >
-                </li>
-            </ul>
-        </li>       
-        <li class="nav-item display-inline"></li>
-        <li>
-        <a href="/profile">
-            <p class="nav-link welcome-nav">welcome, {{user.username | slice:":10" }} !</p>
-        </a>
-        </li>
-      </ul>
-      {% else %}
-      <ul class="d-flex logout-box">
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            href="#"
-            aria-label="Go to the login page"
-            ><i class="fas fa-user"></i>Login</a
-          > <!--href degeri: { url 'account_login' } -->
-        </li>
-      </ul>
-      {% endif %}
-      <p id="search-box-button" class="btn"><i class="fas fa-search"></i></p>
-    </div>
-  </div>
+  <p>Navbar here</p>
 </nav>
-<!-- END OF NAVBAR -->
+<!-- End of navbar -->
 <br /><br /><br />
-<!-- ALERT SECTION -->
+<!-- Alert Section -->
 <section id="alert-box">
   <div class="container">
     <div class="row">
@@ -217,8 +17,7 @@
         <div
           class="alert {{ message.tags }} alert-dismissible fade show alert-success"
           id="alert"
-          role="alert"
-        >
+          role="alert">
           {{ message | safe }}
         </div>
         {% endfor %}
@@ -226,4 +25,4 @@
     </div>
   </div>
 </section>
-<!-- END OF ALERT SECTION -->
+<!-- End of alert section -->
