@@ -23,5 +23,14 @@ html{
 
 h1{
     font-size: 1rem;
-    color: ;
+    color: var(--h1-color);
+}
+
+.nav-item a {
+    font-weight: bold;
+    font-size:.9rem;
+}
+
+footer{
+    border: 3px solid #102040;
 }

@@ -1,8 +1,12 @@
 {% include "html_parts/head.html" %}
 {% include "html_parts/navbar.html" %}
 
-{% block pagescontent %}
-{% endblock pagescontent %}
+<!--This is main content-->
+<div class="container">
+{% block content %}
+{% endblock content %}
+</div>
+<!--End of main content-->
 
 {% include "html_parts/footer.html" %}
 {% include "html_parts/scripts.html" %}
