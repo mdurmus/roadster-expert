@@ -24,6 +24,7 @@ class Category(models.Model):
     """
     title = models.CharField(max_length=50)
     category_image = CloudinaryField('image', default='placeholder')
+    overview = models.TextField(blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:

@@ -19,6 +19,12 @@
             Vehicles
           </a>
           <ul class="dropdown-menu" aria-labelledby="category-menu">
+            <li>
+              <a class="dropdown-item" href="{% url 'categories' %}" style="color:red;">All Categories</a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
             {% for category in categories %}
                 <li>
                   <a class="dropdown-item" href="{% url 'category_vehicles' category_id=category.id %}">{{ category.title }}</a>
