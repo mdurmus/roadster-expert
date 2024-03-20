@@ -87,6 +87,9 @@ class Vehicle(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE,
                                related_name='vehicle_user')
     title = models.CharField(max_length=200, unique=True, blank=False)
+    cc = models.CharField(max_length=5, unique=False, blank=False, default='5000')
+    motor_type = models.CharField(max_length=20, unique=False, blank=False, default='Boxer')
+    hp = models.CharField(max_length=5, unique=False, blank=False, default='10000')
     slug = models.SlugField(max_length=200, unique=True, blank=False)
     summary = models.TextField(blank=True)
     comment_count = models.IntegerField(default=0)
