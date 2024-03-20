@@ -33,7 +33,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['8000-mdurmus-roadsterexpert-uq91yxq6suu.ws-eu110.gitpod.io',
                  '.herokuapp.com']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-mdurmus-roadsterexpert-uq91yxq6suu.ws-eu110.gitpod.io/']
+CSRF_TRUSTED_ORIGINS = ['https://8000-mdurmus-roadsterexpert-uq91yxq6suu.ws-eu110.gitpod.io']
 
 
 # Application definition
