@@ -47,5 +47,6 @@ class ListVehicleInCategoryListView(ListView):
         return context
 
     def get_queryset(self):
-        category_id = self.kwargs['category_id']
-        return Vehicle.objects.filter(category_id=category_id)
+        title = self.kwargs['cat_name']
+        category = Category.objects.get(title=title)
+        return Vehicle.objects.filter(category=category)
