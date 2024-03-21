@@ -1,3 +1,4 @@
+from .forms import CommentForm
 from django.shortcuts import (
     render, get_object_or_404, reverse, redirect, resolve_url)
 from django.views import generic, View 
