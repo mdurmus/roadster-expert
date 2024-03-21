@@ -51,4 +51,9 @@ class ListVehicleInCategoryListView(ListView):
         category = Category.objects.get(title=title)
         return Vehicle.objects.filter(category=category)
 
-class AboutListView(ListView):
+def about(request):
+    '''
+    About page
+    '''
+    context = {'page_name':'About'}
+    return render(request, 'vehicle/about.html',context)

@@ -5,6 +5,7 @@
     --h1-color: #102040;
     --h2-color: #f22738;
     --h3-color: #cc0000;
+    --h4-color: #281aef;
 }
 
 * {
@@ -34,6 +35,20 @@ h1{
     color: var(--h1-color);
 }
 
+h2{
+    font-size: 2rem;
+    color: var(--h2-color);
+}
+
+h3{
+    font-size: 1.2rem;
+    color: var(--h3-color);
+}
+
+h4{
+    font-size: 2rem;
+    color: var(--h4-color);
+}
 .nav-item a {
     font-weight: bold;
     font-size:.9rem;
