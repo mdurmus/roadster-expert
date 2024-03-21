@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="hero-section">
+  <div class="d-flex justify-content-between">
+    <div class="" style="position: absolute; transform: translate(100%, 100%);">
+      <h3>You are here: {{page_name}}</h3>
+    </div>
+  <div
+      style=" margin: auto; padding: auto;
+        background-image: url(https://res.cloudinary.com/dpg6ubeyo/image/upload/v1710930207/hero_xzkkwi.jpg);
+        height: 25vh; width:100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      ">
+  </div>
+</div>
+
+
+<!-- CONTACT SECTION -->
+<section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="contact-details">
+            <h4 class="footer-slogan">Certainly, you can reach us through the following channels:</h4>
+            <p><i class="fas fa-phone"></i><a href="tel:+123"target="_blank">+49 123 45 67</a></p>
+            <p><i class="far fa-envelope"></i><a href="mailto:info@roadsterexpert.xyz"target="_blank">info@roadsterexpert.com</a></p>
+            <p><i class="fas fa-home"></i>NordStr. 15 64581 Germany</p>
+            <p>Feel free to contact us anytime for assistance or inquiries. We're here to help!</p>
+          </div>
+          <div>
+            <!--{% if name %}
+            <h4 class="email-sent-message alert-success">
+              Thanks for your email {{ name}}.<br />
+              We will contact you as soon as possible!
+            </h4>
+            {% endif %}-->
+            <h4 id="email_alert" class="color-trans">..</h4>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <!-- contact form -->
+          <form
+            action="{% url 'contact' %}"
+            onsubmit="return sendMail(this);"
+            class="row g-3"
+          >
+            {% csrf_token %}
+            <div class="col-md-6">
+              <label for="name" class="form-label">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="surname" class="form-label">Surname</label>
+              <input
+                type="text"
+                class="form-control"
+                id="surname"
+                name="surname"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="subject" class="form-label">Subject</label>
+              <input
+                type="text"
+                class="form-control"
+                id="subject"
+                name="subject"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" />
+            </div>
+            <div class="col-md-12">
+              <label for="message" class="form-label">Message</label>
+              <textarea
+                class="form-control"
+                id="message"
+                rows="5"
+                name="message"
+                cols="40"
+                required
+              ></textarea>
+            </div>
+            <div class="col-12" style="display: flex; justify-content: left; align-items: left; height: 100%;">
+                <button type="submit" class="btn btn-primary" style="width: 100px; height: 40px;">Send</button>
+            </div>
+          </form>
+          <!-- end of contact form -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END OF CONTACT SECTION -->
+
+
+
+
+
+
+{% endblock %}

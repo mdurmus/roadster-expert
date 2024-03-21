@@ -55,5 +55,12 @@ def about(request):
     '''
     About page
     '''
-    context = {'page_name':'About'}
+    context = {'page_name':'About Us'}
     return render(request, 'vehicle/about.html',context)
+
+def contact(request):
+    '''
+    Contact page
+    '''
+    context = {'page_name':'Contact Us'}
+    return render(request, 'vehicle/contact.html')

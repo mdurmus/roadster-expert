@@ -5,6 +5,8 @@ email validator
 verbose name validator
  : https://docs.djangoproject.com/en/5.0/ref/validators/
 
+contact form from: https://github.com/soukasamadi/Smoothies-blog/blob/main/templates/recipes/contact.html
+
 
 
 
