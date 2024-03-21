@@ -21,7 +21,7 @@
   
 
 
-<div class="spacer">
+
   <div class="container">
     <div class="row">
       {% for category in categories %}
@@ -34,13 +34,14 @@
           <div class="card-body">
            <p>{{category.overview}}</p>
           </div>
+          <div class="card-footer">
+            <a class="btn btn-primary d-block mx-auto">Continue Readäng</a>
+          </div>
         </div>
       </div>
   {% endfor %}
     </div>
   </div>
-</div>
-
 
 
 {% endblock %}

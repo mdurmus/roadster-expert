@@ -42,7 +42,7 @@ class ListVehicleInCategoryListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['page_name'] = "Vehicles"
+        context['page_name'] = self.kwargs['cat_name']
         context['categories'] = Category.objects.all().order_by('title')
         return context
 
@@ -50,3 +50,5 @@ class ListVehicleInCategoryListView(ListView):
         title = self.kwargs['cat_name']
         category = Category.objects.get(title=title)
         return Vehicle.objects.filter(category=category)
+
+class AboutListView(ListView):
