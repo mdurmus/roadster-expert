@@ -21,8 +21,7 @@ function sendMail() {
             <br> We will contact you as soon as possible!</h4>`;
             },
             function (error) {
-                console.error("Error occurred while sending email:", error);
-                document.getElementById(
+                 document.getElementById(
                     "email_alert"
                 ).innerHTML = `<h4 class="email-sent-message alert-danger">Sorry, something went wrong!
             <br> Try to send an email again.</h4>`;

@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import (
+    render, get_object_or_404, reverse, redirect, resolve_url)
 from django.views import generic, View 
 from django.views.generic import ListView
 from .models import *
@@ -61,3 +62,31 @@ def contact(request):
     '''
     context = {'page_name':'Contact Us'}
     return render(request, 'vehicle/contact.html')
+
+class VehicleDetail(View):
+    '''
+    Render post details
+    '''
+
+    def get(self, request, *args, **kwargs):
+        slug = kwargs.get('slug')
+        queryset = Vehicle.objects.filter(status=1)
+        vehicle = get_object_or_404(queryset, slug=slug)
+        comments = Comment.objects.filter(vehicle=vehicle, approved=True).order_by("-created_on")
+        comments_count = Comment.objects.filter(vehicle=vehicle).count()
+        liked = False
+        if vehicle.likes.filter(id=request.user.id).exists():
+            liked = True
+        
+        return render(
+            request,
+            "vehicle/vehicle_detail.html",
+            {
+                "vehicle": vehicle,
+                "comments": comments,
+                "commented": False,
+                "liked": liked,
+                "comment_form": CommentForm(),
+                "comments_count": comments_count,
+            },
+        )

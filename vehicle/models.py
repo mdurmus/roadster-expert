@@ -34,21 +34,6 @@ class Category(models.Model):
     def __str__(self):
         return f"{self.title}"
 
-#class Author(models.Model):
-#    """
-#    Model for Author object
-#    """
-#    user = models.OneToOneField(User,on_delete=models.CASCADE,
-#                                related_name='user_author')
-#    created_on = models.DateTimeField(auto_now_add=True)
-#    author_picture = CloudinaryField('image', default='placeholder')#
-
-#    class Meta:
-#        verbose_name_plural = 'Authors'
-
-#    def __str__(self):
-#        return f"{self.user.username} created on {self.created_on}"
-
 class VehicleBrand(models.Model):
     """
     Brand of Vehicle objects
@@ -82,6 +67,7 @@ class Vehicle(models.Model):
     """
     brand = models.ForeignKey(VehicleBrand, on_delete=models.CASCADE)
     model = models.ForeignKey(VehicleModel, on_delete=models.CASCADE)
+    #comments = models.ForeignKey(Comment, on_delete=models.CASCADE, related_name="vehicle_comments")
     category = models.ForeignKey(Category, on_delete=models.CASCADE,
                                      related_name='category_vehicle')
     author = models.ForeignKey(User, on_delete=models.CASCADE,
@@ -110,12 +96,16 @@ class Vehicle(models.Model):
     def like_count(self):
         return self.likes.count()
 
+    def get_absolute_url(self):
+        return reverse('vehicle_detail', kwargs={
+            'id': self.id
+        })
+
 class Comment(models.Model):
     """
     Model for Vehicle objects
     """
-    vehicle = models.ForeignKey(Vehicle, on_delete=models.CASCADE,
-                                related_name="vehicle_comment")
+    vehicle = models.ForeignKey(Vehicle, on_delete=models.CASCADE, related_name="vehicle")
     name = models.CharField(max_length = 100, blank=False)
     email = models.EmailField(blank=False)
     comment = models.TextField()
@@ -128,3 +118,20 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment: {self.comment[:50]} by: {self.name}"
+
+
+
+#class Author(models.Model):
+#    """
+#    Model for Author object
+#    """
+#    user = models.OneToOneField(User,on_delete=models.CASCADE,
+#                                related_name='user_author')
+#    created_on = models.DateTimeField(auto_now_add=True)
+#    author_picture = CloudinaryField('image', default='placeholder')#
+
+#    class Meta:
+#        verbose_name_plural = 'Authors'
+
+#    def __str__(self):
+#        return f"{self.user.username} created on {self.created_on}"
