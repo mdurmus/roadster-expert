@@ -2,6 +2,102 @@
 {% load static %}
 {% block content %}
 
-<p>demo</p>
+<div class="hero-section">
+    <div class="d-flex justify-content-between">
+      <div class="" style="position: absolute; transform: translate(100%, 100%);">
+        <h3>You are here:  {{vehicle.title}}</h3>
+      </div>
+    <div
+        style=" margin: auto; padding: auto;
+          background-image: url(https://res.cloudinary.com/dpg6ubeyo/image/upload/v1710930207/hero_xzkkwi.jpg);
+          height: 25vh; width:100%;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        ">
+    </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <h4>{{vehicle.title}}</h4>
+
+    <!--HTML tags come from the database. I wanted to try this.-->
+    <p class="spacer">
+    {{vehicle.summary | safe}}
+    </p>
+    
+    <div class="row">
+        <div class="col-md-8 text-center">
+            <img style="width: 90%; border: 3px solid #ccc; border-radius: 5px;" src="{{vehicle.featured_image.url}}" class="img-fluid" alt="{{vehicle.title}}">
+        </div>
+        <div class="col-md-4">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th colspan="2" style="text-align: center;">
+                            General Specs
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Category</th>
+                        <td>{{ vehicle.category.title }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Brand</th>
+                        <td>{{ vehicle.brand.brand }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Model</th>
+                        <td>{{ vehicle.model.model }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" style="width: 200px;">Motor Type</th>
+                        <td>{{ vehicle.motor_type }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Cylinder</th>
+                        <td>{{ vehicle.cc }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Horsepower</th>
+                        <td>{{ vehicle.hp }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Comments</th>
+                        <td>{{ vehicle.comment_count }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Created on</th>
+                        <td>{{ vehicle.created_on |date:"F j, Y" }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Likes</th>
+                        <td>{{ vehicle.likes }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Last Update</th>
+                        <td>{{ vehicle.updated_on |date:"F j, Y" }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Created On</th>
+                        <td>{{ vehicle.created_on }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>        
+    </div>
+
+    <div class="row">
+        <p>
+            {{vehicle.content | safe}}
+        </p>
+    </div>
+</div>
+
+
 
 {% endblock %}
