@@ -73,9 +73,9 @@ class Vehicle(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE,
                                related_name='vehicle_user')
     title = models.CharField(max_length=200, unique=True, blank=False)
-    cc = models.CharField(max_length=5, unique=False, blank=False, default='5000')
+    cc = models.CharField(max_length=5, unique=False, blank=False, default='10')
     motor_type = models.CharField(max_length=20, unique=False, blank=False, default='Boxer')
-    hp = models.CharField(max_length=5, unique=False, blank=False, default='10000')
+    hp = models.CharField(max_length=5, unique=False, blank=False, default='10')
     slug = models.SlugField(max_length=200, unique=True, blank=False)
     summary = models.TextField(blank=True)
     comment_count = models.IntegerField(default=0)
@@ -119,19 +119,17 @@ class Comment(models.Model):
     def __str__(self):
         return f"Comment: {self.comment[:50]} by: {self.name}"
 
+class Author(models.Model):
+   """
+   Model for Author object
+   """
+   user = models.OneToOneField(User,on_delete=models.CASCADE,
+                               related_name='user_author')
+   created_on = models.DateTimeField(auto_now_add=True)
+   author_picture = CloudinaryField('image', default='placeholder')#
 
+   class Meta:
+       verbose_name_plural = 'Authors'
 
-#class Author(models.Model):
-#    """
-#    Model for Author object
-#    """
-#    user = models.OneToOneField(User,on_delete=models.CASCADE,
-#                                related_name='user_author')
-#    created_on = models.DateTimeField(auto_now_add=True)
-#    author_picture = CloudinaryField('image', default='placeholder')#
-
-#    class Meta:
-#        verbose_name_plural = 'Authors'
-
-#    def __str__(self):
-#        return f"{self.user.username} created on {self.created_on}"
+   def __str__(self):
+       return f"{self.user.username} created on {self.created_on}"
