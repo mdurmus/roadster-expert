@@ -76,7 +76,15 @@
                     </tr>
                     <tr>
                         <th scope="row">Likes</th>
-                        <td>{{ vehicle.likes }}</td>
+                        {% if liked %}
+                        <td>
+                            <i class="fa-brands fa-gratipay" style="color: #158f05;"></i>
+                        </td>
+                        {% else %}
+                        <td>
+                            <i class="fa-solid fa-heart-crack" style="color: #e01a1a;"></i>
+                        </td>
+                        {% endif %}
                     </tr>
                     <tr>
                         <th scope="row">Last Update</th>
@@ -84,7 +92,7 @@
                     </tr>
                     <tr>
                         <th scope="row">Created On</th>
-                        <td>{{ vehicle.created_on }}</td>
+                        <td>{{ vehicle.created_on |date:"F j, Y" }}</td>
                     </tr>
                 </tbody>
             </table>
