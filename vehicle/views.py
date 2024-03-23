@@ -8,6 +8,8 @@ from django.views.generic import ListView, UpdateView
 from .models import *
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.http import HttpResponseRedirect
+
 
 class Home(generic.TemplateView):
     '''
@@ -141,6 +143,10 @@ class EditComment(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     form_class = CommentForm
     success_message = 'The comment was successfully updated'
 
+
+    def get_success_url(self):
+       return reverse('vehicle_detail', args=[self.object.vehicle.slug])
+
 @login_required
 def delete_comment(request, comment_id):
     """
@@ -150,4 +156,4 @@ def delete_comment(request, comment_id):
     comment.delete()
     messages.success(request, 'The comment was deleted successfully')
     return HttpResponseRedirect(reverse(
-        'recipe_detail', args=[comment.recipe.slug]))
+        'vehicle_detail', args=[comment.vehicle.slug]))

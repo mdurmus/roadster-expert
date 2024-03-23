@@ -105,8 +105,8 @@ class Comment(models.Model):
     Model for Vehicle objects
     """
     vehicle = models.ForeignKey(Vehicle, on_delete=models.CASCADE, related_name="vehicle_comments")
-    name = models.CharField(max_length = 100)
-    email = models.EmailField()
+    name = models.CharField(max_length = 100, default='demo')
+    email = models.EmailField(default='asd@asd.com')
     comment = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
