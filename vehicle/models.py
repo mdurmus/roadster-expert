@@ -67,7 +67,6 @@ class Vehicle(models.Model):
     """
     brand = models.ForeignKey(VehicleBrand, on_delete=models.CASCADE)
     model = models.ForeignKey(VehicleModel, on_delete=models.CASCADE)
-    #comments = models.ForeignKey(Comment, on_delete=models.CASCADE, related_name="vehicle_comments")
     category = models.ForeignKey(Category, on_delete=models.CASCADE,
                                      related_name='category_vehicle')
     author = models.ForeignKey(User, on_delete=models.CASCADE,
