@@ -109,7 +109,6 @@
     <div class="container">
         <div class="row">
             <div class="post-comments">
-                <hr class="hr-small">
                     <div class="comment-form">
                         <hr class="hr-small">
                         {% if commented %}
@@ -128,7 +127,7 @@
                         <form method="post">
                             {% csrf_token %}
                             {{ comment_form | crispy }}
-                            <button type="submit" class="btn btn-signup btn-lg mt-5 mb-5">Submit</button>
+                            <button type="submit" class="btn btn-primary btn-lg mt-5 mb-5">Submit</button>
                         </form>
                         {% endif %}
                         {% endif %}
@@ -137,22 +136,18 @@
                 <span class="text-secondary"><i class="far fa-comments"></i>{{ num_comments }}</span>
                 {% for comment in comments %}
                 <div class="users-comments">
-                    <!-- <span><img class="author-img"
-                                src="{{ comment.profile.image.url }}"
-                                alt=""></span> -->
                     <span>{{ comment.name }} | </span>
-                    <span><i class="fas fa-clock"></i> {{ comment.timestamp | timesince }}</span>
-                    <!-- <span><i class="fas fa-heart"></i>12</span> -->
+                    <span><i class="fas fa-clock"></i> {{ comment.created_on | timesince }}</span>
                     <div class="user-comment">
                         <p class="user-comment-title"></p>
-                        <p class="mt-3 w-50">{{ comment.body | linebreaks }}</p>
+                        <p class="mt-3 w-50">{{ comment.comment | safe }}</p>
                     </div>
                     <hr class="hr-small">
                 </div>
                 {% if user.is_authenticated and user.username == comment.name or user.is_superuser %}
-                <a href="{% url 'edit_comment' comment.id %}" class="btn-edit btn-sm btn-secondary mb-3"
+                <a href="{% url 'edit_comment' comment.id %}" class="btn btn-sm btn-warning btn-secondary mb-3"
                     aria-label="Go to the Edit Comments Page">Edit</a>
-                <button type="button" class="btn-delete btn-sm btn-danger mb-3" data-bs-toggle="modal"
+                <button type="button" class="btn btn-sm btn-danger mb-3" data-bs-toggle="modal"
                     data-bs-target="#delete-comment">Delete</button>
                 <!-- Delete comment bootstrap modal-->
                 <div class="modal fade" id="delete-comment" tabindex="-1" aria-hidden="true">

@@ -1,9 +1,13 @@
+from django.contrib.messages.views import SuccessMessageMixin
 from .forms import CommentForm
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import (
     render, get_object_or_404, reverse, redirect, resolve_url)
 from django.views import generic, View 
-from django.views.generic import ListView
+from django.views.generic import ListView, UpdateView
 from .models import *
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 class Home(generic.TemplateView):
     '''
@@ -71,6 +75,7 @@ class VehicleDetail(View):
 
     def get(self, request, *args, **kwargs):
         slug = kwargs.get('slug')
+        print(slug)
         queryset = Vehicle.objects.filter(status=1)
         vehicle = get_object_or_404(queryset, slug=slug)
         comments = Comment.objects.filter(vehicle=vehicle, approved=True).order_by("-created_on")
@@ -91,3 +96,58 @@ class VehicleDetail(View):
                 "comments_count": comments_count,
             },
         )
+    
+    def post(self, request, slug, *args, **kwargs):
+        queryset = Vehicle.objects.filter(status=1)
+        vehicle = get_object_or_404(queryset, slug=slug)
+        comments = vehicle.vehicle_comments.filter(approved=True).order_by("-created_on")
+        comments_count = Comment.objects.filter(vehicle=vehicle).count()
+        liked = False
+        if vehicle.likes.filter(id=self.request.user.id).exists():
+            liked = True
+
+        comment_form = CommentForm(data=request.POST)
+
+        if comment_form.is_valid():
+            comment_form.instance.email = request.user.email
+            comment_form.instance.name = request.user.username
+            comment = comment_form.save(commit=False)
+            comment.vehicle = vehicle
+            comment.save()
+            messages.success(request, """
+            Your comment was sent successfully and is awaiting approval!""")
+        else:
+            comment_form = CommentForm()
+
+        return render(
+            request,
+            "vehicle/vehicle_detail.html",
+            {
+                "vehicle": vehicle,
+                "comments": comments,
+                "commented": True,
+                "liked": liked,
+                "comment_form": CommentForm(),
+                'comments_count': comments_count,
+            },
+        )
+
+class EditComment(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
+    """
+    Edit comment
+    """
+    model = Comment
+    template_name = 'vehicle/edit_comment.html'
+    form_class = CommentForm
+    success_message = 'The comment was successfully updated'
+
+@login_required
+def delete_comment(request, comment_id):
+    """
+    Delete comment
+    """
+    comment = get_object_or_404(Comment, id=comment_id)
+    comment.delete()
+    messages.success(request, 'The comment was deleted successfully')
+    return HttpResponseRedirect(reverse(
+        'recipe_detail', args=[comment.recipe.slug]))
