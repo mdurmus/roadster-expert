@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Vehicle, Comment, VehicleBrand, VehicleModel
+from .models import Category, Vehicle, Comment, VehicleBrand, VehicleModel, Profile, Author
 from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Comment)
@@ -26,6 +26,10 @@ class VehicleAdmin(SummernoteModelAdmin):
     list_filter = ('status','created_on')
     summernote_fields=('summary','content')
 
+@admin.register(Profile)
+class ProfileAdmin(admin.ModelAdmin):
+    list_display = ('user',)
+    
 
 admin.site.register(VehicleBrand)
 admin.site.register(VehicleModel)
