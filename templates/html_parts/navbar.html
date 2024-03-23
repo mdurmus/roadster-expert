@@ -44,10 +44,19 @@
       </ul>
 
       <ul class="d-flex logout-box login-red justify-content-end">
-        <li class="nav-item">
-          <a class="nav-link" href="/accounts/login/" aria-label="Go to the login page"><i class="fas fa-user"></i> Login</a>
+        {% if user.is_authenticated %}
+        <li class="nav-item" style="margin-right: 10px;">
+            <a class="nav-link" href="{% url 'account_logout' %}"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
         </li>
-      </ul>
+        {% else %}
+        <li class="nav-item" style="margin-right: 10px;">
+            <a class="nav-link" href="{% url 'account_signup' %}"><i class="fa-solid fa-user-plus"></i> Sign up</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'account_login' %}"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+        </li>
+        {% endif %}
+    </ul>
       
       <!-- <p id="search-box-button" class="btn"><i class="fas fa-search"></i></p> -->
       
