@@ -29,9 +29,32 @@
     {{vehicle.summary | safe}}
     </p>
     
-    <div class="row mt-5">
-        <div class="col-md-12 text-center">
-            <img style="width: 90%; border: 3px solid #ccc; border-radius: 5px;" src="{{vehicle.featured_image.url}}" class="img-fluid" alt="{{vehicle.title}}">
+    <div class="row mt-5 text-center">
+        <div class="col-md-12">
+            <img style="width: 90%; border: 3px solid #ccc; border-radius: 5px;" src="{{ vehicle.featured_image.url }}" class="img-fluid" alt="{{ vehicle.title }}">
+            <div class="container mt-5">
+                <div class="d-inline">
+                    {% if user.is_authenticated %}
+                    <form class="d-inline" action="{% url 'post_like' vehicle.slug %}" method="post">
+                        {% csrf_token %}
+                        {% if liked %}
+                        <button type="submit" name="vehiclepost_id" value="{{vehicle.slug}}" class="btn-like">
+                            <i class="fa-brands fa-gratipay" style="color: #158f05;font-size: 1.5rem;"></i>
+                        </button>
+                        {% else %}
+                        <button type="submit" name="vehiclepost_id" value="{{vehicle.slug}}" class="btn-like">
+                            <i class="fa-solid fa-heart-crack" style="color: #e01a1a;font-size: 1.5rem;"></i>
+                        </button>
+                        {% endif %}
+                    </form>
+                    {% else %}
+                    <span class="text-secondary"><i class="far fa-heart"></i></span>
+                    {% endif %}
+                </div>
+                <div class="d-inline">
+                    <span class="text-secondary" style="font-size: 1.5rem;">{{ vehicle.like_count }}</span>
+                </div>                
+            </div>
         </div>
         <div class="col-md-12 mt-5">
             <table class="table table-bordered">
@@ -70,22 +93,6 @@
                     <tr>
                         <th scope="row">Comments</th>
                         <td>{{ vehicle.comment_count }}</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Created on</th>
-                        <td>{{ vehicle.created_on |date:"F j, Y" }}</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Likes</th>
-                        {% if liked %}
-                        <td>
-                            <i class="fa-brands fa-gratipay" style="color: #158f05;"></i>
-                        </td>
-                        {% else %}
-                        <td>
-                            <i class="fa-solid fa-heart-crack" style="color: #e01a1a;"></i>
-                        </td>
-                        {% endif %}
                     </tr>
                     <tr>
                         <th scope="row">Last Update</th>

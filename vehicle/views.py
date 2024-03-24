@@ -157,3 +157,18 @@ def delete_comment(request, comment_id):
     messages.success(request, 'The comment was deleted successfully')
     return HttpResponseRedirect(reverse(
         'vehicle_detail', args=[comment.vehicle.slug]))
+
+class PostLike(View):
+    '''
+    For like a vehicle 
+    '''
+    def post(self, request, slug):
+        vehicle = get_object_or_404(Vehicle, slug=slug)
+
+        if vehicle.likes.filter(id=request.user.id).exists():
+            vehicle.likes.remove(request.user)
+        else:
+            vehicle.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('vehicle_detail', args=[slug]))
+

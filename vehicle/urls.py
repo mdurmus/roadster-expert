@@ -1,11 +1,12 @@
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import Home, ListVehicleInCategoryListView, CategoryListView, about, contact,VehicleDetail
+from .views import Home, ListVehicleInCategoryListView, CategoryListView, about, contact,VehicleDetail,PostLike
 from django.urls import path
 from django.contrib import admin
 
 urlpatterns=[
+    path('like/<slug:slug>', views.PostLike.as_view(),name="post_like"),
     path('delete_comment/<int:comment_id>', views.delete_comment,
         name='delete_comment'),
     path('edit_comment/<int:pk>', views.EditComment.as_view(),
