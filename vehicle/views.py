@@ -167,8 +167,10 @@ class PostLike(View):
 
         if vehicle.likes.filter(id=request.user.id).exists():
             vehicle.likes.remove(request.user)
+            messages.warning(request, 'Unliked!')
         else:
             vehicle.likes.add(request.user)
+            messages.success(request,'Liked')
 
         return HttpResponseRedirect(reverse('vehicle_detail', args=[slug]))
 
