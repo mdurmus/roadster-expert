@@ -173,6 +173,3 @@ class PostLike(View):
             messages.success(request,'Liked')
 
         return HttpResponseRedirect(reverse('vehicle_detail', args=[slug]))
-
-def error_404(request, exception):
-    return render(request, '404.html', {})

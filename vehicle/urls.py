@@ -7,8 +7,6 @@ from .views import (Home, ListVehicleInCategoryListView,
                     PostLike)
 from django.urls import path
 from django.contrib import admin
-from django.conf.urls import handler404
-handler404 = 'vehicle.views.error_404'
 
 urlpatterns=[
     path('like/<slug:slug>', views.PostLike.as_view(),name="post_like"),

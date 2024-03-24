@@ -9,7 +9,7 @@ contact form from: https://github.com/soukasamadi/Smoothies-blog/blob/main/templ
 
 content processor: https://a4u.medium.com/context-processor-in-django-62818f14d88f#:~:text=In%20Django%2C%20a%20context%20processor%20is%20a%20Python%20function%20that,rendered%20by%20your%20Django%20application.
 
-
+for custom error page: https://www.youtube.com/watch?v=oX_XKlPJAQk
 
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
