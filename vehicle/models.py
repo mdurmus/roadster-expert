@@ -80,6 +80,8 @@ class Vehicle(models.Model):
     comment_count = models.IntegerField(default=0)
     created_on = models.DateTimeField(auto_now_add=True)
     content = models.TextField(blank=False)
+    max_speed = models.CharField(max_length=5, default='900')
+    acceleration = models.CharField(max_length=5, default='2.8')
     featured_image = CloudinaryField('image',default='placeholder')
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User,related_name='vehicle_like', blank=True)

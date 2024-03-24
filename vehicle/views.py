@@ -25,7 +25,7 @@ class CategoryListView(ListView):
     template_name='vehicle/categories.html'
     model = Category
     context_object_name = 'categories'
-    paginate_by = 5
+    paginate_by = 4
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
