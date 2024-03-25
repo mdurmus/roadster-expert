@@ -1,7 +1,8 @@
-1. Yorumu silerken cikan modalin güncellenmesi 
 2. Slider resimlerinin degistirilmesi ve üzerine hp cc bilgilerinin yazilmasi
 3. Profile view and template.
 4. Search view and template and js!
 5. Blog app
-6. Dosyalarin cloudinary'e tasinmasi
-7. Hata sayfasi eklenmesi
+6. CSS güncellenmesi
+7. Code review
+8. Hata sayfasi eklenmesi
+9. Dosyalarin cloudinary'e tasinmasi
