@@ -44,7 +44,13 @@
       </ul>
 
       <ul class="d-flex logout-box login-red justify-content-end">
+        <li class="nav-item" style="margin-right: 10px;">
+          <a class="nav-link" href="#"><i class="fa-solid fa-search"></i> Search</a>
+      </li>
         {% if user.is_authenticated %}
+        <li class="nav-item" style="margin-right: 10px;">
+          <a class="nav-link" href="#"><i class="fa-solid fa-user"></i> My Profile</a>
+      </li>
         <li class="nav-item" style="margin-right: 10px;">
             <a class="nav-link" href="{% url 'account_logout' %}"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
         </li>
@@ -58,7 +64,7 @@
         {% endif %}
     </ul>
       
-      <!-- <p id="search-box-button" class="btn"><i class="fas fa-search"></i></p> -->
+      
       
     </div>
   </div>
