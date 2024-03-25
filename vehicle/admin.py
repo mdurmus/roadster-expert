@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Category, Vehicle, Comment, VehicleBrand, VehicleModel, Profile, Author
+from .models import Category, Vehicle, Comment, VehicleBrand, 
+VehicleModel, Profile, Author
 from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Comment)
@@ -17,7 +18,6 @@ class CommentAdmin(SummernoteModelAdmin):
     def approve_comments(self,request,queryset):
         queryset.update(approved=True)
 
-
 @admin.register(Vehicle)
 class VehicleAdmin(SummernoteModelAdmin):
     list_display = ('category','brand','model','status')
@@ -30,6 +30,16 @@ class VehicleAdmin(SummernoteModelAdmin):
 class ProfileAdmin(admin.ModelAdmin):
     list_display = ('user',)
     
+
+@admin.register(Author)
+class AuthorAdmin(admin.ModelAdmin):
+    list_display = ('user','timestamp')
+    search_fields = ['user']
+
+@admin.register(Profile)
+class AuthorAdmin(admin.ModelAdmin):
+    list_display = ('user')
+
 
 admin.site.register(VehicleBrand)
 admin.site.register(VehicleModel)
