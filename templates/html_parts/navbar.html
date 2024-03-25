@@ -2,50 +2,81 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <!-- Sol Alanda Logo -->
+    <!-- Menü Area -->
     <a class="navbar-brand" href="/">
       <img src="https://res.cloudinary.com/dpg6ubeyo/image/upload/v1710860588/roadster_logo_azkxq2.png" alt="Roadster Expert logo" class="d-inline-block align-text-top">
     </a>
     
-    <!-- Orta Alanda Menü -->
+    <!-- Navbar Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <!-- Menu Area -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link active" aria-current="page" href="/" style="font-size: 1.2rem;">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" style="font-size: 1.2rem;" href="#" id="category-menu" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+            Vehicles
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="category-menu">
+            <li>
+              <a class="dropdown-item" href="{% url 'categories' %}" style="color:red; font-size: 1.2rem;">All Categories</a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            {% for category in categories %}
+              <li>
+                <a class="dropdown-item" href="{% url 'category_vehicles' cat_name=category.title %}" style="font-size: 1.2rem;">{{ category.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/vehicles">Vehicles</a>
+          <a class="nav-link" href="{% url 'about'%}" style="font-size: 1.2rem;">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/about">About</a>
+          <a class="nav-link" href="{% url 'contact'%}" style="font-size: 1.2rem;">Contact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/blog">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact</a>
+          <a class="nav-link" href="#" style="font-size: 1.2rem; color: #281aef;">Search</a>
         </li>
       </ul>
+
+      <div class="d-flex">
+        <ul class="navbar-nav flex-row">
+          {% if user.is_authenticated %}
+          <li class="nav-item text-center">
+            <a class="nav-link" href="{% url 'my-profile' %}"> <i class="fa-regular fa-address-card" style="font-size: 1.2rem;color: #cc0000;"></i> <br>My Profile</a>
+          </li>
+          <div class="vr" id="menuSeperator" style="margin: 0px 5px;"></div>
+          <li class="nav-item text-center">
+            <a class="nav-link" href="{% url 'account_logout' %}"> <i class="fa-solid fa-right-from-bracket" style="font-size: 1.2rem;color: #cc0000;"></i><br>Logout</a>
+          </li>
+          {% else %}
+          <li class="nav-item text-center">
+            <a class="nav-link" href="{% url 'account_signup' %}"> <i class="fa-solid fa-user-plus" style="font-size: 1.2rem; color: #cc0000;"></i><br>Signup</a>
+          </li>
+          <div class="vr" id="menuSeperator" style="margin: 0px 5px;"></div>
+          <li class="nav-item text-center">
+            <a class="nav-link" href="{% url 'account_login' %}"> <i class="fa-solid fa-right-to-bracket" style="font-size: 1.2rem; color: #cc0000;"></i><br>Login</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+
     </div>
     
-    <!-- Sağ Alanda Search, Signup ve Login Butonları -->
-    <div class="d-flex">
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-      <ul class="navbar-nav flex-row">
-        <li class="nav-item">
-          <a class="nav-link" href="/signup"><i class="fa-solid fa-user-plus"></i> </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/login"><i class="fa-solid fa-right-to-bracket"></i></a>
-        </li>
-      </ul>
-    </div>
+    <!-- Toolbox -->
+    
     
   </div>
 </nav>
+
 
 
 

@@ -11,8 +11,7 @@ class Profile(models.Model):
     """
     Model file for User profile object
     """
-    user = models.OneToOneField(User, on_delete=models.CASCADE,
-                                related_name="user_profile")
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     image = CloudinaryField('image')
 
     def __str__(self):

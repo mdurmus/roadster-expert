@@ -4,11 +4,14 @@ from django.conf.urls.static import static
 from .views import (Home, ListVehicleInCategoryListView, 
                     CategoryListView, about, 
                     contact,VehicleDetail,
-                    PostLike)
+                    PostLike, Profile )
 from django.urls import path
 from django.contrib import admin
+from django.contrib.auth.decorators import login_required
+
 
 urlpatterns=[
+    path('profile/', views.profile, name='my-profile'),
     path('like/<slug:slug>', views.PostLike.as_view(),name="post_like"),
     path('delete_comment/<int:comment_id>', views.delete_comment,
         name='delete_comment'),

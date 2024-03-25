@@ -1,8 +1,13 @@
 1. Slider resimlerinin degistirilmesi ve üzerine hp cc bilgilerinin yazilmasi
-2. Profile view and template.
-3. Search view and template and js!
-4. Blog app
-5. CSS güncellenmesi
-6. Code review
-7. Hata sayfasi eklenmesi
-8. Dosyalarin cloudinary'e tasinmasi
+2. Search view and template and js!
+3. Blog app / My Experience
+4. CSS güncellenmesi
+5. Code review
+6. Hata sayfasi eklenmesi
+7. Dosyalarin cloudinary'e tasinmasi
+
+
+css notes:
+#menuSeperator soldan sagdan 15px bosluk cihaza göre font ayarla
+.navbar a { font-size:1.2rem;}
+.navbar li 
