@@ -12,7 +12,6 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ('comment',)
 
-
 class UserUpdateForm(forms.ModelForm):
     """
     Form for User update 
