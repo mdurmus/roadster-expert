@@ -9,6 +9,7 @@ from .models import *
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.http import HttpResponseRedirect
+from django.db.models import Q
 
 class Home(generic.TemplateView):
     '''
@@ -199,7 +200,8 @@ def searchform(request, **kwargs):
     """
     if request.method == 'POST':
         search_query = request.POST.get('search_query', '')
-        search_result = Vehicle.objects.filter(title__icontains = search_query)
+        search_result = Vehicle.objects.filter(Q(title__icontains = search_query) | 
+                                               Q(summary__icontains = search_query))
 
         context = {
             'search_query':search_query,

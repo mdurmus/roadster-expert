@@ -9,3 +9,12 @@ css notes:
 #menuSeperator soldan sagdan 15px bosluk cihaza göre font ayarla
 .navbar a { font-size:1.2rem;}
 .navbar li 
+
+
+for antonio:
+
+It works with all its functions now. I guess I don't need to add another blog application. 
+
+Maybe I can put a link called my cars where users can register their cars. Like aliekoffe my meal..
+
+I haven't looked at the CSS and js files yet. I will finish these in 1-2 days. 

@@ -1,21 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<div class="hero-section">
-    <div class="d-flex justify-content-between">
-      <div class="" style="position: absolute; transform: translate(100%, 100%);">
-        <h3>You are here: {{page_name}}</h3>
-      </div>
-    <div
-        style=" margin: auto; padding: auto;
-          background-image: url(https://res.cloudinary.com/dpg6ubeyo/image/upload/v1710930207/hero_xzkkwi.jpg);
-          height: 25vh; width:100%;
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
-        ">
-    </div>
-  </div>
+{% include 'html_parts/hero.html' %}
 
 
 <div class="col-md-8 offset-md-2 mt-5 mb-5">
