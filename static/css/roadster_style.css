@@ -2,9 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root{
-    --h1-color: #102040;
-    --h2-color: #f22738;
-    --h3-color: #cc0000;
+    --h1-color: #131626;
+    --h2-color: #f22222;
+    --h3-color: #0d6efd;
     --h4-color: #281aef;
 }
 
@@ -14,6 +14,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+div.carousel-caption .slider-title{
+    color:#0d6efd;
+    text-transform: uppercase;
 }
 
 div.spacer{
