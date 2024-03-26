@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.contrib.auth import get_user_model
 from cloudinary.models import CloudinaryField
+from django.utils import timezone
 
 STATUS = ((0, "Draft"),(1, "Published"))
 CABIN_TYPE = ((0, "Coupe"),(1, "Cabrio"),(2, "Targa"))
@@ -95,6 +96,12 @@ class Vehicle(models.Model):
     
     def like_count(self):
         return self.likes.count()
+
+    def get_updated_days_ago(self):
+        today = timezone.now().date()
+        updated_on = self.updated_on.date()
+        datediff = today - updated_on
+        return datediff.days
 
     def get_absolute_url(self):
         return reverse('vehicle_detail', kwargs={

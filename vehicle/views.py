@@ -192,3 +192,21 @@ def profile(request):
         'profile_form':profile_form,
     }
     return render(request, 'vehicle/profile.html',context)
+
+def searchform(request, **kwargs):
+    """
+    search
+    """
+    if request.method == 'POST':
+        search_query = request.POST.get('search_query', '')
+        search_result = Vehicle.objects.filter(title__icontains = search_query)
+
+        context = {
+            'search_query':search_query,
+            'search_results': search_result
+        }
+
+        return render(request, 'vehicle/search.html', context)
+    
+    elif request.method == 'GET':
+        return render(request, 'vehicle/search.html')

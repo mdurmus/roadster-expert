@@ -16,9 +16,18 @@
     box-sizing: border-box;
 }
 
-div.carousel-caption .slider-title{
-    color:#0d6efd;
+.slider-title{
+    color:#cc0000;
     text-transform: uppercase;
+}
+
+.slider-bg p{
+    color:#0d6efd;
+}
+
+.slider-bg{
+    padding: 15px;
+    background-color: hsla(0, 0%, 95%, 0.8);
 }
 
 div.spacer{
