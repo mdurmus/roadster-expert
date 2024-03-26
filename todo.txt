@@ -1,9 +1,8 @@
-2. Search view and template and js!
-3. Blog app / My Experience
-4. CSS güncellenmesi
-5. Code review
-6. Hata sayfasi eklenmesi
-7. Dosyalarin cloudinary'e tasinmasi
+1. Blog app / My Experience
+2. CSS güncellenmesi
+3. Code review
+4. Hata sayfasi eklenmesi
+5. Dosyalarin cloudinary'e tasinmasi
 
 
 css notes:

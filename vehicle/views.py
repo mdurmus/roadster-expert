@@ -173,8 +173,8 @@ class PostLike(View):
 
         return HttpResponseRedirect(reverse('vehicle_detail', args=[slug]))
 
+@login_required
 def profile(request):
-    
     if request.method == 'POST':
         user_form = UserUpdateForm(request.POST, instance=request.user)
         profile_form = ProfileUpdateForm(request.POST, request.FILES, instance = request.user.profile)
@@ -182,7 +182,7 @@ def profile(request):
             user_form.save()
             profile_form.save()
             messages.success(request, 'Your account has been updated!')
-            return redirect('profile')
+            return redirect(reverse('my-profile'))
     else:
         user_form = UserUpdateForm(instance = request.user)
         profile_form = ProfileUpdateForm(instance = request.user.profile)
