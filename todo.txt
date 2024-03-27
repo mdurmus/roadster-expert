@@ -1,9 +1,8 @@
-1. Blog app / My Experience
+
 2. CSS güncellenmesi
 3. Code review
 4. Hata sayfasi eklenmesi
 5. Bütün dosyalarin cloudinary'e tasinmasi
-6. MY profile'de currently i yok et. 
 7. 404 ve 500 sayfalarini ekle!
 8. araba detay safasinin ekini degistir.
 

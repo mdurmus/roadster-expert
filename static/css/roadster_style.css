@@ -192,3 +192,5 @@ a.navbar-brand img{
     }
 }
 /* #endregion */
+
+div#div_id_image > div.input-group.mb-2{display: none;}
