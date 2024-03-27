@@ -104,7 +104,7 @@ class Vehicle(models.Model):
         return datediff.days
 
     def get_absolute_url(self):
-        return reverse('vehicle_detail', kwargs={
+        return reverse('vehicle-detail', kwargs={
             'id': self.id
         })
 
