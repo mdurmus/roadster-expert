@@ -42,6 +42,12 @@
         <li class="nav-item">
           <a class="nav-link" href="{% url 'contact'%}" style="font-size: 1.2rem;">Contact</a>
         </li>
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'experiences-list'%}" style="font-size: 1.2rem;">Experiences</a>
+        </li>
+        
+        {% endif%}
         <li class="nav-item">
           <a class="nav-link" href="#" id="searchButton" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="font-size: 1.2rem; color: #281aef;">Search</a>
         </li>
