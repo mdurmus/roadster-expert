@@ -2,19 +2,14 @@
 2. CSS güncellenmesi
 3. Code review
 4. Hata sayfasi eklenmesi
-5. Dosyalarin cloudinary'e tasinmasi
+5. Bütün dosyalarin cloudinary'e tasinmasi
+6. MY profile'de currently i yok et. 
+7. 404 ve 500 sayfalarini ekle!
+8. araba detay safasinin ekini degistir.
+
 
 
 css notes:
 #menuSeperator soldan sagdan 15px bosluk cihaza göre font ayarla
 .navbar a { font-size:1.2rem;}
-.navbar li 
-
-
-for antonio:
-
-It works with all its functions now. I guess I don't need to add another blog application. 
-
-Maybe I can put a link called my cars where users can register their cars. Like aliekoffe my meal..
-
-I haven't looked at the CSS and js files yet. I will finish these in 1-2 days. 
+.navbar li

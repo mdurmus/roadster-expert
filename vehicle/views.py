@@ -68,7 +68,7 @@ def contact(request):
     Contact page
     '''
     context = {'page_name':'Contact Us'}
-    return render(request, 'vehicle/contact.html')
+    return render(request, 'vehicle/contact.html',context)
 
 class VehicleDetail(View):
     '''

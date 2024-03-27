@@ -11,6 +11,7 @@ from django.contrib.auth.decorators import login_required
 
 
 urlpatterns = [
+    path('vehicle-detail/<slug:slug>/', views.VehicleDetail.as_view(), name='vehicle-detail'),
     path('search/', views.searchform, name='search_form'),
     path('profile/', views.profile, name='my-profile'),
     path('like/<slug:slug>/', views.PostLike.as_view(), name="post_like"),
@@ -20,6 +21,5 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact'),
     path('categories/', views.CategoryListView.as_view(), name='categories'),
-    path('category/<str:cat_name>/', views.ListVehicleInCategoryListView.as_view(), name='category_vehicles'), 
-    path('<slug:slug>/', views.VehicleDetail.as_view(), name='vehicle_detail'),
+    path('category/<str:cat_name>/', views.ListVehicleInCategoryListView.as_view(), name='category_vehicles'),
 ]
