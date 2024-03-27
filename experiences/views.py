@@ -1,6 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic
 from .models import Experience
+from .forms import ExperienceForm, UpdateExperienceForm
 
 class ExperienceList(generic.ListView):
     model = Experience
@@ -19,7 +20,7 @@ class ExperienceList(generic.ListView):
 def my_experiences(request, user_id):
     user_experiences = Experience.objects.filter(user_id=user_id, approved=True)
     return render(request, 'experiences/my_experiences.html', 
-                  {'experience_list': user_experiences, 
+                  {'experiences': user_experiences, 
                   'page_name': 'My Experiences'})
 
 def experience_detail(request, exp_id):
@@ -27,3 +28,27 @@ def experience_detail(request, exp_id):
     return render(request, 'experiences/experience-detail.html',
                   {'experience' : experience,
                    'page_name':'Experience Detail'})
+
+def create_experience(request):
+    if request.method == 'POST':
+        form = ExperienceForm(request.POST, request.FILES)
+        if form.is_valid():
+            experience = form.save(commit=False)
+            experience.user = request.user
+            experience.save()
+            return redirect('experiences-list')
+    else:
+        form = ExperienceForm()
+        return render(request, 'experiences/create_experience.html', {'form':form,'page_name': 'Create Experience'})
+
+def update_experience(request, exp_id):
+    experience = get_object_or_404(Experience, id=exp_id)
+    
+    if  request.method == 'POST':
+        form = UpdateExperienceForm(request.POST, instance = experience)
+        if form.is_valid():
+            form.save()
+            return redirect('experience-detail', exp_id=exp_id)
+    else:
+        form = UpdateExperienceForm(instance=experience)
+        return render(request, 'experiences/update-experience.html', {'form': form, 'page_name':'Update Experience'})

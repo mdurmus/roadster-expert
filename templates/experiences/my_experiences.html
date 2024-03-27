@@ -3,8 +3,45 @@
 {% block content %}
 {% include 'html_parts/hero.html' %}
 
+<div class="container">
+    <div class="row">
+        <table class="table table-dark table-striped mt-5">
+            <thead>
+              <tr>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Title</th>
+                <th>Created On</th>
+                <th>Proccess</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% if experiences.count > 0 %}
+                    {% for exp in experiences %}
+                    <tr>
+                        <td>{{exp.brand}}</td>
+                        <td>{{exp.model}}</td>
+                        <td>{{exp.title}}</td>
+                        <td>{{exp.created_on |date:"F j, Y"}}</td>
+                        <td><a href="{% url 'experience-detail' exp_id=exp.id %}" class="btn btn-sm btn-danger">Detail</a></td>
+                    </tr>
+                    {% endfor%}
+                {% else %}
+                    <tr>
+                        <td colspan="6">
+                            <div class="row" style="padding: 15px;"> 
+                                <div class="alert alert-primary" >
+                                    <p>No any data here!</p>
+                                  </div>
+                            </div>
+                            
+                        </td>
+                    </tr>
+                {% endif%}
+            </tbody>
+          </table>
+    </div>
+</div>
 
-{{page_name}}
-<p>my experiences here!</p>
 
 {% endblock %}

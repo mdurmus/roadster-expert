@@ -3,13 +3,13 @@
 {% block content %}
 {% include 'html_parts/hero.html' %}
 
-
-<p>brand: {{experience.brand}}</p>
-<p>id: {{experience.id}}</p>
-<hr>
-
-<div class="container">
-    <div class="row">
+<div class="container mt-5">
+    <div class="row col-md-12">
+      <div class="col-md-12 mb-3 offset-4">
+        {% if request.user.id == experience.user.id %}
+            <a href="{% url 'update-experience' exp_id=experience.id %}" class="btn btn-block btn-warning">Update this experience</a>
+        {% endif %}
+      </div>
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
               <h2 class="accordion-header">
@@ -20,8 +20,10 @@
               <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <div class="col-md-12">
+                    <div class="row">
                   <img src="{{ experience.featured_image.url }}" alt="Experience Vehicle" />
                   </div>
+                </div>
                 </div>
               </div>
             </div>
@@ -33,8 +35,25 @@
               </h2>
               <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  {{experience.brand}}
-                </div>
+                  <dl>
+                    <dt>User</dt>
+                    <dd>{{experience.user}}</dd>
+                  
+                    <dt>Brand</dt>
+                    <dd>{{experience.brand}}</dd>
+                  
+                    <dt>Modell</dt>
+                    <dd>{{experience.model}}</dd>
+                    
+                    <dt>Title</dt>
+                    <dd>{{experience.title}}</dd>
+                    <dt>Summary</dt>
+                    <dd>{{experience.summary}}</dd>
+                    <dt>Maximum Speed</dt>
+                    <dd>{{experience.max_speed}}</dd>
+                    <dt>Created On</dt>
+                    <dd>{{experience.created_on}}</dd>
+                  </dl>
               </div>
             </div>
             <div class="accordion-item">
@@ -50,7 +69,7 @@
               </div>
             </div>
           </div>
-    </div>
+  </div>
 </div>
 
 {% endblock %}
