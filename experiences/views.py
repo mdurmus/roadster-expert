@@ -8,7 +8,8 @@ class ExperienceList(generic.ListView):
     context_object_name = 'experiences'
 
     def get_queryset(self):
-        return Experience.objects.filter(approved=True)
+        user = self.request.user
+        return Experience.objects.filter(approved=True).exclude(user=user).order_by('-created_on')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -17,6 +18,12 @@ class ExperienceList(generic.ListView):
 
 def my_experiences(request, user_id):
     user_experiences = Experience.objects.filter(user_id=user_id, approved=True)
-    return render(request, 'experiences/experience_detail.html', 
+    return render(request, 'experiences/my_experiences.html', 
                   {'experience_list': user_experiences, 
-                  'page_name': 'Experiences Detail'})
+                  'page_name': 'My Experiences'})
+
+def experience_detail(request, exp_id):
+    experience = get_object_or_404(Experience, id=exp_id)
+    return render(request, 'experiences/experience-detail.html',
+                  {'experience' : experience,
+                   'page_name':'Experience Detail'})
