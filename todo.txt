@@ -1,11 +1,7 @@
-
-2. CSS güncellenmesi
-3. Code review
-4. Hata sayfasi eklenmesi
-5. Bütün dosyalarin cloudinary'e tasinmasi
-7. 404 ve 500 sayfalarini ekle!
-8. araba detay safasinin ekini degistir.
-
+1. Bütün dosyalarin cloudinary'e tasinmasi
+2. 404 ve 500 sayfalarini ekle!
+3. CSS güncellenmesi
+4. Code review
 
 
 css notes:
