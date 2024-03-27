@@ -1,18 +1,22 @@
-from django.shortcuts import render
-form .models import Experience
+from django.shortcuts import render, get_object_or_404
+from django.views import generic
+from .models import Experience
 
 class ExperienceList(generic.ListView):
     model = Experience
-    template_name='experiences/experiences_list.html'
-    context = {'page_name':'All Experiences'}
+    template_name='experiences/experience_list.html'
     context_object_name = 'experiences'
 
     def get_queryset(self):
-        return Experiences.objects.filter(approved=True)
+        return Experience.objects.filter(approved=True)
 
-class MyExperiences(DetailView):
-    model = Experience
-    template_name = 'experiences/experiences_detail.html'
-    context = {'page_name':'Experiences Detail'}
-    context_object_name = 'experience'
-    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['page_name'] = 'All Experiences'
+        return context
+
+def my_experiences(request, user_id):
+    user_experiences = Experience.objects.filter(user_id=user_id, approved=True)
+    return render(request, 'experiences/experience_detail.html', 
+                  {'experience_list': user_experiences, 
+                  'page_name': 'Experiences Detail'})

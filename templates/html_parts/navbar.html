@@ -44,21 +44,15 @@
         </li>
         {% if user.is_authenticated %}
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" style="font-size: 1.2rem;" href="#" id="category-menu" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
-            Vehicles
+          <a class="nav-link dropdown-toggle" style="font-size: 1.2rem; color:#cc0000;" href="#" id="category-menu" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+            Experiences
           </a>
           <ul class="dropdown-menu" aria-labelledby="category-menu">
-            <li>
-              <a class="dropdown-item" href="#" style="color:red; font-size: 1.2rem;">Experiences</a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
             <li>
               <a class="dropdown-item" href="{% url 'experiences-list' %}" style="font-size: 1.2rem;">All Experiences</a>
             </li>
             <li>
-              <a class="dropdown-item" href="{% url 'my-experiences' %}" style="font-size: 1.2rem;">My Experiences</a>
+              <a class="dropdown-item" href="{% url 'my-experiences' user_id=user.id %}" style="font-size: 1.2rem;">My Experiences</a>
             </li>
           </ul>
         </li>
