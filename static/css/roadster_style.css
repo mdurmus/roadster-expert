@@ -56,6 +56,20 @@ main{
 /* #endregion */
 
 
+/* #region Navbar */
+a#searchButton{
+    color:var(--third_color);
+}
+
+.nav-item a {
+    font-weight: bold;
+    font-size:.9rem;
+}
+
+/* #endregion */
+
+
+
 /* #region Slider */
 .slider-bg{
     padding: 10px;
@@ -77,15 +91,8 @@ main{
 }
 /* #endregion Slider */
 
-
-
-
-
 /*
-.nav-item a {
-    font-weight: bold;
-    font-size:.9rem;
-}
+
 
 a.navbar-brand img{
     width:180px;

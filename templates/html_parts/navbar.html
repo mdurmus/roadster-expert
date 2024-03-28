@@ -17,49 +17,49 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/" style="font-size: 1.2rem;">Home</a>
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" style="font-size: 1.2rem;" href="#" id="category-menu" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+          <a class="nav-link dropdown-toggle" href="#" id="category-menu" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
             Vehicles
           </a>
           <ul class="dropdown-menu" aria-labelledby="category-menu">
             <li>
-              <a class="dropdown-item" href="{% url 'categories' %}" style="color:red; font-size: 1.2rem;">All Categories</a>
+              <a class="dropdown-item" href="{% url 'categories' %}" style="color:red;">All Categories</a>
             </li>
             <li>
               <hr class="dropdown-divider">
             </li>
             {% for category in categories %}
               <li>
-                <a class="dropdown-item" href="{% url 'category_vehicles' cat_name=category.title %}" style="font-size: 1.2rem;">{{ category.title }}</a>
+                <a class="dropdown-item" href="{% url 'category_vehicles' cat_name=category.title %}">{{ category.title }}</a>
               </li>
             {% endfor %}
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'about'%}" style="font-size: 1.2rem;">About</a>
+          <a class="nav-link" href="{% url 'about'%}">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'contact'%}" style="font-size: 1.2rem;">Contact</a>
+          <a class="nav-link" href="{% url 'contact'%}">Contact</a>
         </li>
         {% if user.is_authenticated %}
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" style="font-size: 1.2rem; color:#cc0000;" href="#" id="category-menu" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+          <a class="nav-link dropdown-toggle" href="#" id="category-menu" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
             Experiences
           </a>
           <ul class="dropdown-menu" aria-labelledby="category-menu">
             <li>
-              <a class="dropdown-item" href="{% url 'experiences-list' %}" style="font-size: 1.2rem;">All Experiences</a>
+              <a class="dropdown-item" href="{% url 'experiences-list' %}">All Experiences</a>
             </li>
             <li>
-              <a class="dropdown-item" href="{% url 'my-experiences' user_id=user.id %}" style="font-size: 1.2rem;">My Experiences</a>
+              <a class="dropdown-item" href="{% url 'my-experiences' user_id=user.id %}">My Experiences</a>
             </li>
           </ul>
         </li>
         {% endif%}
         <li class="nav-item">
-          <a class="nav-link" href="#" id="searchButton" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="font-size: 1.2rem; color: #281aef;">Search</a>
+          <a class="nav-link" href="#" id="searchButton" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: #281aef;">Search</a>
         </li>
       </ul>
 
@@ -68,20 +68,20 @@
           {% if user.is_authenticated %}
           <div class="vr" id="menuSeperator" style="margin: 0px 5px;"></div>
           <li class="nav-item text-center">
-            <a class="nav-link" href="{% url 'my-profile' %}"> <i class="fa-regular fa-address-card" style="font-size: 1.2rem;color: #cc0000;"></i> <br>{{user.username}}</a>
+            <a class="nav-link" href="{% url 'my-profile' %}"> <i class="fa-regular fa-address-card" style="color: #cc0000;"></i> <br>{{user.username}}</a>
           </li>
           <div class="vr" id="menuSeperator" style="margin: 0px 5px;"></div>
           <li class="nav-item text-center">
-            <a class="nav-link" href="{% url 'account_logout' %}"> <i class="fa-solid fa-right-from-bracket" style="font-size: 1.2rem;color: #cc0000;"></i><br>Log Out</a>
+            <a class="nav-link" href="{% url 'account_logout' %}"> <i class="fa-solid fa-right-from-bracket" style="color: #cc0000;"></i><br>Log Out</a>
           </li>
           {% else %}
           <div class="vr" id="menuSeperator" style="margin: 0px 5px;"></div>
           <li class="nav-item text-center">
-            <a class="nav-link" href="{% url 'account_signup' %}"> <i class="fa-solid fa-user-plus" style="font-size: 1.2rem; color: #cc0000;"></i><br>Signup</a>
+            <a class="nav-link" href="{% url 'account_signup' %}"> <i class="fa-solid fa-user-plus" style="color: #cc0000;"></i><br>Signup</a>
           </li>
           <div class="vr" id="menuSeperator" style="margin: 0px 5px;"></div>
           <li class="nav-item text-center">
-            <a class="nav-link" href="{% url 'account_login' %}"> <i class="fa-solid fa-right-to-bracket" style="font-size: 1.2rem; color: #cc0000;"></i><br>Login</a>
+            <a class="nav-link" href="{% url 'account_login' %}"> <i class="fa-solid fa-right-to-bracket" style="color: #cc0000;"></i><br>Login</a>
           </li>
           {% endif %}
         </ul>
