@@ -1,15 +1,17 @@
 {% extends "base.html" %}
-
-
 {% block content %}
 {% include 'html_parts/hero.html' %}
 
-<div class="container">
+<section class="section-margin">
+  <h2 class="text-center">
+    Please select a vehicle
+  </h2>
+  <div class="container">
   <div class="row">
     {% if vehicles %}
       {% for vehicle in vehicles %}
-        <div class="col-12 col-md-4 mt-5">
-          <div class="card" style="width: 18rem;">
+        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
+          <div class="card">
             <img src="{{ vehicle.featured_image.url }}" class="card-img-top" alt="{{ vehicle.title }}">
             <div class="card-body">
               <h5 class="card-title">{{ vehicle.title }}</h5>
@@ -22,7 +24,7 @@
           </div>
         </div>
       {% endfor %}
-      
+      <!--Pagination section-->
       <div class="col-12 mt-4">
         {% if is_paginated %}
           <ul class="pagination justify-content-center">
@@ -52,22 +54,21 @@
           </ul>
         {% endif %}
       </div>
-      
+      <!--End of pagination-->
     {% else %}
+    <!--If no any records-->
       <div class="col-12">
         <div class="alert alert-warning mt-5" role="alert">
           <h4 class="alert-heading">Ooops!</h4>
           <p>This category currently has no vehicles listed. Please browse other categories until new vehicles are added. Feel free to explore other options to find the right vehicle for you or check back later for updates. Keep following us for any updates. If you have any questions or requests, please don't hesitate to contact us.</p>
           <hr>
-          <p class="mb-0 text-center"><a href="#" target="_blank" rel="noopener" aria-label="Write us email">Roadster Support Department</a></p>
+          <p class="mb-2 text-center"><a href="mailto:support@support.xxx" class="btn btn-outline-info mt-5" target="_blank" rel="noopener" aria-label="Write us email">Roadster Support Department</a></p>
         </div>
       </div>
+      <!-- End of any records -->
     {% endif %}
   </div>
-</div>
-
-
-
-
+  </div>
+</section>
 
 {% endblock %}
