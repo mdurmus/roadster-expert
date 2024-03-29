@@ -4,28 +4,22 @@
 {% include 'html_parts/hero.html' %}
 
 
-<!-- CONTACT SECTION -->
-<section id="contact">
+<!-- Contact section -->
+<section class="section-margin">
     <div class="container">
       <div class="row">
         <div class="col-md-4">
-          <div class="contact-details">
-            <h4 class="footer-slogan">Certainly, you can reach us through the following channels:</h4>
-            <p><i class="fas fa-phone"></i><a href="tel:+123"target="_blank">+49 123 45 67</a></p>
-            <p><i class="far fa-envelope"></i><a href="mailto:info@roadsterexpert.xyz"target="_blank">info@roadsterexpert.com</a></p>
-            <p><i class="fas fa-home"></i>NordStr. 15 64581 Germany</p>
-            <p>Feel free to contact us anytime for assistance or inquiries. We're here to help!</p>
+            <h4>Certainly, you can reach us through the following channels:</h4>
+            <div id="contact-type">
+              <ul>
+              <li><i class="fas fa-phone"></i> <a href="tel:123" target="_blank" aria-label="Call Us" rel="noopener"> +49 275 999 99</a></li>
+              <li><i class="far fa-envelope"></i> <a href="mailto:demo@demo.com" target="_blank" aria-label="Write Us" rel="noopener"> info@rodsterexpert.com</a></li>
+              <li><i class="fas fa-home"></i> <a href="https://maps.app.goo.gl/TdsbBm52p7a5DgFPA" target="_blank" aria-label="Visit Us" rel="noopener">Mercedes Str. 1, Stutgart</a></li>
+              <li>Feel free to contact us anytime for assistance or inquiries. We're here to help!</li>
+            </ul>
+          </div>     
+            <p id="email-result"></p>
           </div>
-          <div>
-            <!--{% if name %}
-            <h4 class="email-sent-message alert-success">
-              Thanks for your email {{ name}}.<br />
-              We will contact you as soon as possible!
-            </h4>
-            {% endif %}-->
-            <h4 id="email_alert" class="color-trans">..</h4>
-          </div>
-        </div>
         <div class="col-md-8">
           <!-- contact form -->
           <form
