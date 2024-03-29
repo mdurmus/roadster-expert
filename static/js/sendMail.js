@@ -27,5 +27,5 @@ function sendMail() {
             <br> Try to send an email again.</p>`;
             }
         );
-    return false; // To block from loading a new page
+    return false;
 }
