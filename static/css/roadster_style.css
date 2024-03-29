@@ -47,17 +47,14 @@ h4{
 /* #endregion */
 
 /* #region Base HTML Rules */
-
 body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
-
 html{
     scroll-behavior:smooth;
 }
-
 main{
     flex: 1 0 auto;
 }
