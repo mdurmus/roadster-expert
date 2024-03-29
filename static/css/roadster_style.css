@@ -68,14 +68,7 @@ html{
 main{
     flex: 1 0 auto;
 }
-.section-margin{
-    margin-top: 35px;
-    margin-bottom: 20px;
-}
-.content-inner {
-    padding-top: 50px;
-    padding-bottom: 20px; 
-}
+
 /* #endregion */
 /* #region Navbar */
 .logo{
@@ -89,6 +82,29 @@ a#searchButton{
 }
 .menu-icon a{
  color: var(--main_color);
+}
+/* #endregion */
+/* #region General Features */
+blockquote{
+    color:hsl(215.75, 98.36%, 52.16%);
+    padding: 10px;  
+}
+div.hero-container{
+    position: relative; 
+    width:100%;
+    height: 25vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(https://res.cloudinary.com/dpg6ubeyo/image/upload/v1710930207/hero_xzkkwi.jpg);
+}
+div.hero-title > p.here{
+    position: absolute; 
+    top: 20px;
+    left: 5px;
+    color: white;
+    background-color: hsla(215.75, 98.36%, 52.16%, .4);
+    padding: 10px;
 }
 /* #endregion */
 /* #region Slider */
@@ -134,4 +150,12 @@ div#contact-type > ul > li{
 
 
 
+.section-margin{
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+.content-inner {
+    padding-top: 50px;
+    padding-bottom: 20px; 
+}
 div#div_id_image > div.input-group.mb-2{display: none;}
