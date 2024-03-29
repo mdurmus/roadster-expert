@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root{
     --main_color: hsl(354.98, 88.65%, 55.1%);
     --second_color: hsl(220, 60%, 15.69%);
@@ -7,6 +8,7 @@
     --bg_color: hsl(0, 0%, 94.9%);
     --backup_color: hsl(190.04, 89.72%, 49.61%);
 }
+
 * {
     transition: all ease 0.3s;
     text-decoration: none !important;
@@ -15,6 +17,7 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+
 /* #region Headers */
 h1{
     font-size: 2.25rem;
@@ -41,48 +44,59 @@ h4{
     color:hsl(var(--backup_color)) ;
 }
 /* #endregion */
+
 /* #region Base HTML Rules */
+
 body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
+
 html{
     scroll-behavior:smooth;
 }
+
 main{
     flex: 1 0 auto;
 }
 /* #endregion */
 
-
 /* #region Navbar */
+.logo{
+    width:180px;
+}
 a#searchButton{
     color:var(--third_color);
 }
-
 .nav-item a {
-    font-weight: bold;
-    font-size:.9rem;
+    font-weight: 550;
 }
+.menu-icon a{
+ color: var(--main_color);
+}
+
 
 /* #endregion */
 
-
-
 /* #region Slider */
-.slider-bg{
-    padding: 10px;
-    background-color: hsla(var(--bg_color), 0.5);
+
+
+
+div.slider-bg{
+    background-color: hsla(0, 0%, 94.9%, .3);
 }
+
 .slider-title{
     color:#cc0000;
     text-transform: uppercase;
+    font-size: .7rem;
 }
 
 .slider-bg p{
     color:#0d6efd;
     font-weight: 500;
+    font-size:.5rem;
 }
 
 .carousel-control-next-icon,
@@ -188,31 +202,5 @@ a.navbar-brand img{
 /* #endregion Footer */
 
 
-/* #region Large or landscape phones (576px and up) */
-@media screen and (min-width: 576px) {
-    
-}
-/* #endregion */
-
-/* #region Tablets and larger (768px and up) Ipad air and above */
-@media screen and (min-width: 768px) {
-
-}
-/* #endregion */
-
-/* #region Large devices (laptops and desktops, 992px and up) */
-@media screen and (min-width: 992px) {
-
-}
-/* #endregion */
-
-/* #region Largest screens */
-@media screen and (min-width: 1200px) {
-    a.navbar-brand img{
-        width:60%;
-        height: auto;
-    }
-}
-/* #endregion */
 
 div#div_id_image > div.input-group.mb-2{display: none;}
