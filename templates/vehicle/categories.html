@@ -3,15 +3,16 @@
 {% block content %}
 {% include 'html_parts/hero.html' %}
 
-  
-
-
-
+<!--Category List Section-->
+<section class="section-margin">
+  <h2 class="text-center">
+    Please select a category
+  </h2>
   <div class="container">
     <div class="row">
       {% for category in categories %}
       <div class="col-md-4 mt-5">
-        <div class="card" style="width: 18rem;">
+        <div class="card">
           <img src="{{ category.category_image.url}}" class="card-img-top" alt="{{category.title}}">
           <div class="card-body">
             <h5 class="card-title">{{ category.title }}</h5>
@@ -27,6 +28,7 @@
   {% endfor %}
     </div>
   </div>
-
+</section>
+<!--Edn of category list section-->
 
 {% endblock %}
