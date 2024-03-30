@@ -176,8 +176,8 @@ div#contact-type > ul > li{
   @media (min-width: 992px) and (max-width: 1199.98px) {
     .carousel-control-next-icon,
     .carousel-control-prev-icon {
-        width: 7vw;
-        height: 7vw;
+        width: 6vw;
+        height: 6vw;
         
     }
   }
@@ -186,8 +186,8 @@ div#contact-type > ul > li{
   @media (min-width: 1200px) {
     .carousel-control-next-icon,
     .carousel-control-prev-icon {
-        width: 9vw;
-        height: 9vw;
+        width: 7vw;
+        height: 7vw;
     }
   }
 

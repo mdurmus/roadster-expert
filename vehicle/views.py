@@ -44,7 +44,7 @@ class ListVehicleInCategoryListView(ListView):
     template_name='vehicle/category_vehicles.html'
     model = Vehicle
     context_object_name = 'vehicles'
-    paginate_by = 5
+    paginate_by = 6
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -173,7 +173,7 @@ class PostLike(View):
             vehicle.likes.add(request.user)
             messages.success(request,'Liked')
 
-        return HttpResponseRedirect(reverse('vehicle_detail', args=[slug]))
+        return HttpResponseRedirect(reverse('vehicle-detail', args=[slug]))
 
 @login_required
 def profile(request):
