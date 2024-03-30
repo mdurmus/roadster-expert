@@ -89,7 +89,6 @@ a#searchButton{
 .menu-icon a{
  color: var(--main_color);
 }
-
 /* #endregion */
 /* #region General Features */
 ul.navbar-nav a:hover{color:red;}
@@ -112,10 +111,12 @@ div.hero-container{
 div.hero-title > p.here{
     position: absolute; 
     top: 20px;
-    left: 5px;
+    left: 15px;
     color: white;
     background-color: hsla(215.75, 98.36%, 52.16%, .4);
     padding: 10px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px 1px var(--main_color);
 }
 .vehicle-detail{
     border: 3px solid #ccc;
@@ -192,6 +193,11 @@ div#footer-links ul{
     .navbar-nav .nav-link {
         font-size: .8rem;
       }
+    div.hero-title > p.here{
+        border-radius: 5px;
+        font-size: 1.2rem;
+        box-shadow: 1px 1px 1px 1px var(--main_color);
+    }
 }
   
   /* Large (lg) */
@@ -208,6 +214,9 @@ div#footer-links ul{
     .navbar-nav .nav-link {
         font-size: 1rem;
       }
+    div.hero-title > p.here{
+        font-size: 1.6rem;
+    }
   }
   
   /* Extra Large (xl) */
@@ -224,6 +233,9 @@ div#footer-links ul{
     .navbar-nav .nav-link {
         font-size: 1.2rem;
       }
+      div.hero-title > p.here{
+        font-size: 1.6rem;
+    }
   }
 
 div#div_id_image > div.input-group.mb-2{display: none;}
