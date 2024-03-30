@@ -14,3 +14,7 @@ css notes:
 #menuSeperator soldan sagdan 15px bosluk cihaza göre font ayarla
 .navbar a { font-size:1.2rem;}
 .navbar li
+
+
+for antonio:
+hem you are here hemde, h3 baslik bilgisi mantiklimi birini sileyimmi?

@@ -3,13 +3,16 @@
 {% block content %}
 {% include 'html_parts/hero.html' %}
 
-<div class="container mt-5">
-    <div class="row col-md-12">
-      <div class="col-md-12 mb-3 offset-4">
+<section class="section-margin">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-12 mb-3">
         {% if request.user.id == experience.user.id %}
             <a href="{% url 'update-experience' exp_id=experience.id %}" class="btn btn-block btn-warning">Update this experience</a>
         {% endif %}
-      </div>
+        </div>
+    </div>
+      <div class="row">
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
               <h2 class="accordion-header">
@@ -38,13 +41,10 @@
                   <dl>
                     <dt>User</dt>
                     <dd>{{experience.user}}</dd>
-                  
                     <dt>Brand</dt>
                     <dd>{{experience.brand}}</dd>
-                  
                     <dt>Modell</dt>
                     <dd>{{experience.model}}</dd>
-                    
                     <dt>Title</dt>
                     <dd>{{experience.title}}</dd>
                     <dt>Summary</dt>
@@ -69,7 +69,8 @@
               </div>
             </div>
           </div>
+        </div>
   </div>
-</div>
+</section>
 
 {% endblock %}

@@ -4,9 +4,11 @@
 {% block content %}
 {% include 'html_parts/hero.html' %}
 
+<!--Section create experience-->
+<section class="section-margin">
 <div class="container">
+    <h3>Create Experience</h3>
     <div class="row mt-5">
-        <h2>Create New Experience</h2>
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form|crispy }}
@@ -14,6 +16,7 @@
           </form>
     </div>
 </div>
-
+</section>
+<!--End of create experience-->
 
 {% endblock %}
