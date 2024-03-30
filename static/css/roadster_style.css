@@ -8,8 +8,14 @@
     --bg_color: hsl(0, 0%, 94.9%);
     --backup_color: hsl(190.04, 89.72%, 49.61%);
 }
-
-
+.section-margin{
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+.content-inner {
+    padding-top: 50px;
+    padding-bottom: 20px; 
+}
 /* #region Headers */
 h1{
     font-size: 2.25rem;
@@ -85,6 +91,10 @@ a#searchButton{
 }
 /* #endregion */
 /* #region General Features */
+ul.navbar-nav a:hover{color:red;}
+a#searchButton:hover{
+color:var(--font_color);
+}
 blockquote{
     color:hsl(215.75, 98.36%, 52.16%);
     padding: 10px;  
@@ -152,14 +162,4 @@ div#contact-type > ul > li{
 }
 /* #endregion Footer */
 
-
-
-.section-margin{
-    margin-top: 35px;
-    margin-bottom: 20px;
-}
-.content-inner {
-    padding-top: 50px;
-    padding-bottom: 20px; 
-}
 div#div_id_image > div.input-group.mb-2{display: none;}

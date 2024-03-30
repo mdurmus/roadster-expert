@@ -1,19 +1,6 @@
-1. My Experiences sayfalari
-3. Hata sayfalarini base'den cikar
-4. Kullanici ve yorumlarini kontrol et.
-4. Searc butonunun üstüne gelince mavi olsun.
-5. Slider'i cihazlara göre kontrol et.
-5. My experiences icin js filtreleme olayina bak
-1. Bütün dosyalarin cloudinary'e tasinmasi
-3. CSS güncellenmesi
-4. Code review
-5. Vehicle detail safalarinin veri tabanindan gelen kisimlarini oradan düzelt
-
-
-css notes:
-#menuSeperator soldan sagdan 15px bosluk cihaza göre font ayarla
-.navbar a { font-size:1.2rem;}
-.navbar li
+*. Slider'i cihazlara göre kontrol et.
+*. Bütün dosyalarin cloudinary'e tasinmasi
+*. Code review
 
 
 for antonio:

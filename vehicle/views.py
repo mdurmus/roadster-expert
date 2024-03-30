@@ -146,7 +146,7 @@ class EditComment(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
 
 
     def get_success_url(self):
-       return reverse('vehicle_detail', args=[self.object.vehicle.slug])
+       return reverse('vehicle-detail', args=[self.object.vehicle.slug])
 
 @login_required
 def delete_comment(request, comment_id):
@@ -157,7 +157,7 @@ def delete_comment(request, comment_id):
     comment.delete()
     messages.success(request, 'The comment was deleted successfully')
     return HttpResponseRedirect(reverse(
-        'vehicle_detail', args=[comment.vehicle.slug]))
+        'vehicle-detail', args=[comment.vehicle.slug]))
 
 class PostLike(View):
     '''
@@ -192,8 +192,9 @@ def profile(request):
     context = {
         'user_form':user_form,
         'profile_form':profile_form,
+        'page_name':'Your profile'
     }
-    return render(request, 'vehicle/profile.html',context)
+    return render(request, 'vehicle/profile.html',context,)
 
 def searchform(request, **kwargs):
     """

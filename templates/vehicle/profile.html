@@ -6,9 +6,10 @@
 {% include 'html_parts/hero.html' %}
 
 <!-- Profile Section -->
-<div class="container mt-5">
-    <h2 class="title">Profile Informations</h2>
-      <div class="col-md-12">
+<section class="section-margin">
+<div class="container">
+    <h3 class="title">Profile Informations</h3>
+      <div class="col-md-12 mt-3">
         {% if user.profile.image %}
         <img class="profile-user-img" src="{{ user.profile.image.url }}" style="width:250px;" alt="User Image"/>
         {% else %}
@@ -25,6 +26,7 @@
     <button class="btn btn-primary mt-3 mb-3" type="submit">Update</button>
   </form>
 </div>
+</section>
 <!-- End of Profile section -->
 
 {% endblock %}
