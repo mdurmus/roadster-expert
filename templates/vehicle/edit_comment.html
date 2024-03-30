@@ -1,11 +1,12 @@
 {% extends 'base.html' %} {% load static %} {% load crispy_forms_tags %} {% block content %}
 
 <!-- Retrive comment section -->
-<div class="edit-comments container">
+<section class="section-margin">
+<div class="container">
   <div class="row">
     <div class="col-12 text-center">
-      <h1 class="title">Edit your comment</h1>
-      <p>Edit comment as: {{ user.username | slice:":10" }}</p>
+      <h4>Edit your comment</h4>
+      <p>Edit comment as: <strong>{{ user.username | slice:":10" }}</strong></p>
       {% if user.profile.image %}
       <img
         class="author-img mb-4"
@@ -29,6 +30,7 @@
     </div>
   </div>
 </div>
+</section>
 <!-- End of update section  -->
 
 {% endblock content %}

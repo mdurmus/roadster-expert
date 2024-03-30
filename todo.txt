@@ -1,7 +1,13 @@
+1. My Experiences sayfalari
+3. Hata sayfalarini base'den cikar
+4. Kullanici ve yorumlarini kontrol et.
+4. Searc butonunun üstüne gelince mavi olsun.
+5. Slider'i cihazlara göre kontrol et.
+5. My experiences icin js filtreleme olayina bak
 1. Bütün dosyalarin cloudinary'e tasinmasi
-2. 404 ve 500 sayfalarini ekle!
 3. CSS güncellenmesi
 4. Code review
+5. Vehicle detail safalarinin veri tabanindan gelen kisimlarini oradan düzelt
 
 
 css notes:

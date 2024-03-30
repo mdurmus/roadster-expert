@@ -96,6 +96,7 @@ class VehicleDetail(View):
                 "liked": liked,
                 "comment_form": CommentForm(),
                 "comments_count": comments_count,
+                "page_name": vehicle.title,
             },
         )
     
