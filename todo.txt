@@ -1,4 +1,3 @@
-Logo, hero, menu fontlari cihaz büyüklügüne göre degisimi?
 Code review
 Bütün dosyalarin cloudinary'e tasinmasi
 
