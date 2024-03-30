@@ -6,19 +6,21 @@
 
 {% block content %}
 
+<section class="section-margin">
 <div class="container">
   <div class="row">
       <div class="col-md-8 mt-3 offset-md-2">
         <h2>{% trans "Sign Out" %}</h2>
-        <p>{% trans 'Are you sure you want to sign out?' %}</p>
+        <p class="fs-5 lh-base mt-3">{% trans 'Are you sure you want to sign out?' %}</p>
         <form method="post" action="{% url 'account_logout' %}">
         {% csrf_token %}
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
         {% endif %}
-        <button class="btn btn-danger" type="submit">{% trans 'Sign Out' %}</button>
+        <button class="btn btn-outline-danger" type="submit">{% trans 'Sign Out' %}</button>
         </form>
       </div>
   </div>
 </div>
+</section>
 {% endblock %}
