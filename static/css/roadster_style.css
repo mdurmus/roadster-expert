@@ -89,6 +89,7 @@ a#searchButton{
 .menu-icon a{
  color: var(--main_color);
 }
+
 /* #endregion */
 /* #region General Features */
 ul.navbar-nav a:hover{color:red;}
@@ -173,7 +174,9 @@ div#footer-links ul{
     .logo{
         width:300px;
     }
-
+    .navbar-nav .nav-link {
+        font-size: .6rem;
+      }
   }
 
 /* Medium (md) */
@@ -186,6 +189,9 @@ div#footer-links ul{
         width: 5vw;
         height: 5vw;
     }
+    .navbar-nav .nav-link {
+        font-size: .8rem;
+      }
 }
   
   /* Large (lg) */
@@ -193,13 +199,15 @@ div#footer-links ul{
     .logo{
         width:350px;
     }
-    
     .carousel-control-next-icon,
     .carousel-control-prev-icon {
         width: 6vw;
         height: 6vw;
         
     }
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+      }
   }
   
   /* Extra Large (xl) */
@@ -213,6 +221,9 @@ div#footer-links ul{
         width: 7vw;
         height: 7vw;
     }
+    .navbar-nav .nav-link {
+        font-size: 1.2rem;
+      }
   }
 
 div#div_id_image > div.input-group.mb-2{display: none;}
