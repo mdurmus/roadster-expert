@@ -8,14 +8,7 @@
     --bg_color: hsl(0, 0%, 94.9%);
     --backup_color: hsl(190.04, 89.72%, 49.61%);
 }
-.section-margin{
-    margin-top: 35px;
-    margin-bottom: 20px;
-}
-.content-inner {
-    padding-top: 50px;
-    padding-bottom: 20px; 
-}
+
 /* #region Headers */
 h1{
     font-size: 2.25rem;
@@ -74,11 +67,18 @@ html{
 main{
     flex: 1 0 auto;
 }
-
+.section-margin{
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+.content-inner {
+    padding-top: 50px;
+    padding-bottom: 20px; 
+}
 /* #endregion */
 /* #region Navbar */
 .logo{
-    width:180px;
+    width:30%;
 }
 a#searchButton{
     color:var(--third_color);
@@ -135,11 +135,12 @@ div.hero-title > p.here{
 }
 #footer-logo {
     margin-top: 25px;
-    width: 90%;
+    width: 80%;
 }
 .footer-abouts{
     font-size: 1rem;
     width:90%;
+    text-align: justify;
 }
 div#footer-vertical-line{
     display: none;
@@ -160,6 +161,10 @@ div#contact-type > ul{
 }
 div#contact-type > ul > li{
     margin:25px;
+}
+div#footer-links ul{
+    list-style: none;
+    margin-left: -30px;
 }
 /* #endregion Footer */
 
@@ -190,7 +195,5 @@ div#contact-type > ul > li{
         height: 7vw;
     }
   }
-
-
 
 div#div_id_image > div.input-group.mb-2{display: none;}

@@ -1,5 +1,7 @@
-*. Bütün dosyalarin cloudinary'e tasinmasi
-*. Code review
+Logo, hero, menu fontlari cihaz büyüklügüne göre degisimi?
+Code review
+Bütün dosyalarin cloudinary'e tasinmasi
+
 
 
 for antonio:

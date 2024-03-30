@@ -4,7 +4,7 @@
     <hr>
   <div class="container-fluid">
     <div class="row" style="background-color: aliceblue;">
-      <div class="col-md-8">
+      <div class="col-md-6">
          <div class="col-md-12">
             <a href="/">
               <img id="footer-logo" src="https://res.cloudinary.com/dpg6ubeyo/image/upload/v1710860588/roadster_logo_azkxq2.png" alt="Roadster Expert"></a>
@@ -15,7 +15,20 @@
           </p>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-2 pt-3">
+        <h3 class="footer-slogan">Links</h3>
+        <div id="footer-links">
+          <ul>
+          <li><a href="/" target="_same" aria-label="Our Home page">Home</a></li>
+          <li><a href="{% url 'categories' %}" target="_same" aria-label="Our Categories">Categories</a></li>
+          <li><a href="{% url 'about'%}" target="_same" aria-label="About Us">About Us</a></li>
+          <li><a href="{% url 'contact'%}" target="_same" aria-label="Our Contact Page">Contact</a></li>
+          <li><a href="{% url 'account_signup' %}" target="_same" aria-label="Signup Page">Signup</a></li>
+          <li><a href="{% url 'account_login' %}" target="_same" aria-label="Login Page">Login</a></li>
+        </ul>
+      </div>
+      </div>
+      <div class="col-md-4 pt-3">
         <h3 class="footer-slogan">We're just a click away!</h3>
         <div id="contact-type">
           <ul>
