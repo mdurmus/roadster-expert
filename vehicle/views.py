@@ -221,8 +221,7 @@ def searchform(request, **kwargs):
     """
     if request.method == 'POST':
         search_query = request.POST.get('search_query', '')
-        search_result = Vehicle.objects
-        .filter(
+        search_result = Vehicle.objects.filter(
                 Q(title__icontains=search_query) |
                 Q(summary__icontains=search_query)
                 )
