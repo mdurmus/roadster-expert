@@ -10,21 +10,19 @@
   <div class="row">
       <div class="col-md-8 mt-3 offset-md-2">
           <h3>{% trans "Sign In" %}</h3>
-
           <p class="fs-5 lh-base mt-3">{% blocktrans %}Welcome back to the code|star blog. To leave a comment or like a post, please log in. If
-              you
-              have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
-              first.{% endblocktrans %}</p>
+              you have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
       </div>
   </div>
+</div>
 </section>
 <!--End of welcome section-->
 
-<!--Login form-->
-<section class="section-margin">
-<div class="container">
+<!--Login form-->    
+<div class="container section-margin">
   <div class="row">
       <div class="col-md-8 mt-3 offset-md-2">
+        <h3>Login Form</h3>
           <form class="login" method="POST" action="{% url 'account_login' %}">
               {% csrf_token %}
               {{ form.as_p }}
@@ -36,7 +34,5 @@
       </div>
   </div>
 </div>
-</div>
-</section>
 <!--End of login form section-->
 {% endblock %}

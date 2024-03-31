@@ -22,12 +22,12 @@
             <h3 class="footer-slogan">Links</h3>
             <div id="footer-links">
                <ul>
-                  <li><a href="/" target="_same" aria-label="Our Home page">Home</a></li>
-                  <li><a href="{% url 'categories' %}" target="_same" aria-label="Our Categories">Categories</a></li>
-                  <li><a href="{% url 'about'%}" target="_same" aria-label="About Us">About Us</a></li>
-                  <li><a href="{% url 'contact'%}" target="_same" aria-label="Our Contact Page">Contact</a></li>
-                  <li><a href="{% url 'account_signup' %}" target="_same" aria-label="Signup Page">Signup</a></li>
-                  <li><a href="{% url 'account_login' %}" target="_same" aria-label="Login Page">Login</a></li>
+                  <li><a href="/" target="_self" aria-label="Our Home page">Home</a></li>
+                  <li><a href="{% url 'categories' %}" target="_self" aria-label="Our Categories">Categories</a></li>
+                  <li><a href="{% url 'about'%}" target="_self" aria-label="About Us">About Us</a></li>
+                  <li><a href="{% url 'contact'%}" target="_self" aria-label="Our Contact Page">Contact</a></li>
+                  <li><a href="{% url 'account_signup' %}" target="_self" aria-label="Signup Page">Signup</a></li>
+                  <li><a href="{% url 'account_login' %}" target="_self" aria-label="Login Page">Login</a></li>
                </ul>
             </div>
          </div>
@@ -35,7 +35,7 @@
          <!--Mini Contact Are-->
          <div class="col-md-4 pt-3">
             <h3 class="footer-slogan">We're just a click away!</h3>
-            <div id="contact-type">
+            <div id="footer-contact-type">
                <ul>
                   <li><i class="fas fa-phone"></i> <a href="tel:123" target="_blank" aria-label="Call Us" rel="noopener"> +49 275 999 99</a></li>
                   <li><i class="far fa-envelope"></i> <a href="mailto:demo@demo.com" target="_blank" aria-label="Write Us" rel="noopener"> info@rodsterexpert.com</a></li>

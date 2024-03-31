@@ -156,11 +156,13 @@ div#footer-vertical-line{
     margin: 20px 0px;
     color:var(--main_color);
 }
-div#contact-type > ul{
+div#contact-type > ul,
+div#footer-contact-type ul{
     list-style: none;
     margin-left: -45px;
 }
-div#contact-type > ul > li{
+div#contact-type > ul > li,
+div#footer-contact-type > ul >li{
     margin:25px;
 }
 div#footer-links ul{

@@ -7,8 +7,7 @@
 {% block content %}
 
 <!--Login section already signed up-->
-<section class="section-margin">
-<div class="container">
+<div class="container section-margin">
   <div class="row">
       <div class="col-md-8 mt-3 offset-md-2">
       <h2>{% trans "Sign Up" %}</h2>
@@ -16,12 +15,10 @@
        </div>
   </div>
 </div>
-</section>
 <!--End of login section already sign up-->
 
 <!--Register Form-->
-<section class="section-margin">
-  <div class="container">
+  <div class="container section-margin">
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
           <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
@@ -35,7 +32,6 @@
         </div>
       </div>
     </div>
-</section>
 <!--End of Register Form-->
 
 {% endblock %}
