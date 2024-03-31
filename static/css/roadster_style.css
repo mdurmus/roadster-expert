@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-
 :root{
     --main_color: hsl(354.98, 88.65%, 55.1%);
     --second_color: hsl(220, 60%, 15.69%);
@@ -8,7 +7,6 @@
     --bg_color: hsl(0, 0%, 94.9%);
     --backup_color: hsl(190.04, 89.72%, 49.61%);
 }
-
 /* #region Headers */
 h1{
     font-size: 2.25rem;
@@ -122,6 +120,7 @@ div.hero-title > p.here{
     border: 3px solid #ccc;
     border-radius: 5px;
 }
+div#div_id_image > div.input-group.mb-2{display: none;}
 /* #endregion */
 /* #region Slider */
 .carousel-control-next-icon,
@@ -169,7 +168,6 @@ div#footer-links ul{
     margin-left: -30px;
 }
 /* #endregion Footer */
-
 /* Small (sm) */
 @media (min-width: 576px) and (max-width: 767.98px) {
     .logo{
@@ -179,7 +177,6 @@ div#footer-links ul{
         font-size: .6rem;
       }
   }
-
 /* Medium (md) */
 @media (min-width: 768px) and (max-width: 991.98px) {
     .logo{
@@ -198,10 +195,9 @@ div#footer-links ul{
         font-size: 1.2rem;
         box-shadow: 1px 1px 1px 1px var(--main_color);
     }
-}
-  
-  /* Large (lg) */
-  @media (min-width: 992px) and (max-width: 1199.98px) {
+  }
+/* Large (lg) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
     .logo{
         width:350px;
     }
@@ -218,13 +214,11 @@ div#footer-links ul{
         font-size: 1.6rem;
     }
   }
-  
-  /* Extra Large (xl) */
-  @media (min-width: 1200px) {
+/* Extra Large (xl) */
+@media (min-width: 1200px) {
     .logo{
         width:400px;
     }
-
     .carousel-control-next-icon,
     .carousel-control-prev-icon {
         width: 7vw;
@@ -237,5 +231,3 @@ div#footer-links ul{
         font-size: 1.6rem;
     }
   }
-
-div#div_id_image > div.input-group.mb-2{display: none;}
