@@ -2,37 +2,35 @@
 {% load static %}
 {% block content %}
 {% include 'html_parts/hero.html' %}
-
 <!--Category List Section-->
 <section class="section-margin">
-  <h2 class="text-center">
-    Please select a category
-  </h2>
-  <div class="container">
-    <div class="row">
-      {% for category in categories %}
-      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mt-5">
-        <div class="card">
-            {% if "placeholder" in category.category_image.url %}
-            <img src="https://res.cloudinary.com/dpg6ubeyo/image/upload/v1711876390/no_photo_kzpzal.webp" class="card-img-top" alt="No Photo"> 
-            {% else %}
-            <img src="{{ category.category_image.url }}" class="card-img-top" alt="{{ category.title }}">    
-            {% endif %}
-          <div class="card-body">
-            <h5 class="card-title">{{ category.title }}</h5>
-          </div>
-          <div class="card-body">
-            <p>{{ category.overview }}</p>
-          </div>
-          <div class="card-footer">
-            <a class="btn btn-primary d-block mx-auto" href="{% url 'category_vehicles' cat_name=category.title %}">Go to Vehicles</a>
-          </div>
-        </div>
+   <h2 class="text-center">
+      Please select a category
+   </h2>
+   <div class="container">
+      <div class="row">
+         {% for category in categories %}
+         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mt-5">
+            <div class="card">
+               {% if "placeholder" in category.category_image.url %}
+               <img src="https://res.cloudinary.com/dpg6ubeyo/image/upload/v1711876390/no_photo_kzpzal.webp" class="card-img-top" alt="No Photo"> 
+               {% else %}
+               <img src="{{ category.category_image.url }}" class="card-img-top" alt="{{ category.title }}">    
+               {% endif %}
+               <div class="card-body">
+                  <h5 class="card-title">{{ category.title }}</h5>
+               </div>
+               <div class="card-body">
+                  <p>{{ category.overview }}</p>
+               </div>
+               <div class="card-footer">
+                  <a class="btn btn-primary d-block mx-auto" href="{% url 'category_vehicles' cat_name=category.title %}">Go to Vehicles</a>
+               </div>
+            </div>
+         </div>
+         {% endfor %}
       </div>
-      {% endfor %}
-    </div>
-</div>
+   </div>
 </section>
 <!--Edn of category list section-->
-
 {% endblock %}

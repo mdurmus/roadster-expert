@@ -2,38 +2,33 @@
 {% load static %}
 {% block content %}
 {% include 'html_parts/hero.html' %}
-
-
-<div class="col-md-8 offset-md-2 mt-5 mb-5">
-    <h2>You searched for: {{ search_query }}</h2>
-</div>
-
-
-
-<div class="container">
-    <div class="row">
-        {% for vehicle in search_results %}
-    <div class="card mb-3 col-xs-12 col-md-3 col-lg-12">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="{{ vehicle.featured_image.url }}" class="img-fluid rounded-start" alt="{{vehicle.title}}">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">{{ vehicle.title}}</h5>
-              <p class="card-text"><span class="badge text-bg-primary">Category: {{ vehicle.category}}</span></p>
-              <p class="card-text">{{ vehicle.summary | safe}}</p>
-              <p class="card-text"><small class="text-body-secondary">Last updated {{ vehicle.get_updated_days_ago}} days ago</small></p>
-              <a href="{% url 'vehicle-detail' slug=vehicle.slug %}" target="_self" rel="noopener" class="btn btn-block btn-danger">Go to detail page</a>
+<!--Search Result section-->
+<section class="section-margin">
+   <div class="col-md-8 offset-md-2 mt-5 mb-5">
+      <h2>You searched for: {{ search_query }}</h2>
+   </div>
+   <div class="container">
+      <div class="row">
+         {% for vehicle in search_results %}
+         <div class="card mb-3 col-xs-12 col-md-3 col-lg-12">
+            <div class="row g-0">
+               <div class="col-md-4">
+                  <img src="{{ vehicle.featured_image.url }}" class="img-fluid rounded-start" alt="{{vehicle.title}}">
+               </div>
+               <div class="col-md-8">
+                  <div class="card-body">
+                     <h5 class="card-title">{{ vehicle.title}}</h5>
+                     <p class="card-text"><span class="badge text-bg-primary">Category: {{ vehicle.category}}</span></p>
+                     <p class="card-text">{{ vehicle.summary | safe}}</p>
+                     <p class="card-text"><small class="text-body-secondary">Last updated {{ vehicle.get_updated_days_ago}} days ago</small></p>
+                     <a href="{% url 'vehicle-detail' slug=vehicle.slug %}" target="_self" rel="noopener" class="btn btn-block btn-danger">Go to detail page</a>
+                  </div>
+               </div>
             </div>
-          </div>
-        </div>
+         </div>
+         {% endfor %}
       </div>
-        {% endfor %}
-    </div>
-</div>
-
-
-
-
+   </div>
+</section>
+<!--End of search result section-->
 {% endblock %}

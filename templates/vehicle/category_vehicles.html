@@ -1,78 +1,78 @@
 {% extends "base.html" %}
 {% block content %}
 {% include 'html_parts/hero.html' %}
-
 <section class="section-margin">
-  <h2 class="text-center">
-    Please select a vehicle
-  </h2>
-  <div class="container">
-  <div class="row">
-    {% if vehicles %}
-      {% for vehicle in vehicles %}
-        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
-          <div class="card">
-            {% if "placeholder" in vehicle.featured_image.url %}
-            <img src="https://res.cloudinary.com/dpg6ubeyo/image/upload/v1711876938/nocar_avaxjp.jpg" class="card-img-top" alt="No Photo"> 
-            {% else %}
-            <img src="{{ vehicle.featured_image.url }}" class="card-img-top" alt="{{ vehicle.title }}">
-            {% endif %}
-            <div class="card-body">
-              <h5 class="card-title">{{ vehicle.title }}</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="{% url 'vehicle-detail' slug=vehicle.slug %}" class="btn btn-primary">Go somewhere</a>
+   <h2 class="text-center">
+      Please select a vehicle
+   </h2>
+   <div class="container">
+      <div class="row">
+         {% if vehicles %}
+         {% for vehicle in vehicles %}
+         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
+            <div class="card">
+               {% if "placeholder" in vehicle.featured_image.url %}
+               <img src="https://res.cloudinary.com/dpg6ubeyo/image/upload/v1711876938/nocar_avaxjp.jpg" class="card-img-top" alt="No Photo"> 
+               {% else %}
+               <img src="{{ vehicle.featured_image.url }}" class="card-img-top" alt="{{ vehicle.title }}">
+               {% endif %}
+               <div class="card-body">
+                  <h5 class="card-title">{{ vehicle.title }}</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="{% url 'vehicle-detail' slug=vehicle.slug %}" class="btn btn-primary">Go somewhere</a>
+               </div>
+               <div class="card-footer">
+                  <i class="fa-solid fa-gauge-high" style="color: #bd0000;"></i> {{vehicle.max_speed}} mph 
+                  <div class="vr"></div>
+                  <i class="fa-solid fa-stopwatch" style="color: #bd0000;"></i> {{vehicle.acceleration}} sec. 
+                  <div class="vr"></div>
+                  <i class="fa-solid fa-horse" style="color: #bd0000;"></i> {{vehicle.hp}}
+               </div>
             </div>
-            <div class="card-footer">
-              <i class="fa-solid fa-gauge-high" style="color: #bd0000;"></i> {{vehicle.max_speed}} mph <div class="vr"></div> <i class="fa-solid fa-stopwatch" style="color: #bd0000;"></i> {{vehicle.acceleration}} sec. <div class="vr"></div> <i class="fa-solid fa-horse" style="color: #bd0000;"></i> {{vehicle.hp}}
+         </div>
+         {% endfor %}
+         <!--Pagination section-->
+         <div class="col-12 mt-4">
+            {% if is_paginated %}
+            <ul class="pagination justify-content-center">
+               {% if page_obj.has_previous %}
+               <li class="page-item">
+                  <a class="page-link" href="?page=1">First</a>
+               </li>
+               <li class="page-item">
+                  <a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+               </li>
+               {% endif %}
+               {% for num in page_obj.paginator.page_range %}
+               <li class="page-item {% if page_obj.number == num %}active{% endif %}">
+                  <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+               </li>
+               {% endfor %}
+               {% if page_obj.has_next %}
+               <li class="page-item">
+                  <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
+               </li>
+               <li class="page-item">
+                  <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+               </li>
+               {% endif %}
+            </ul>
+            {% endif %}
+         </div>
+         <!--End of pagination-->
+         {% else %}
+         <!--If no any records-->
+         <div class="col-12">
+            <div class="alert alert-warning mt-5" role="alert">
+               <h4 class="alert-heading">Ooops!</h4>
+               <p>This category currently has no vehicles listed. Please browse other categories until new vehicles are added. Feel free to explore other options to find the right vehicle for you or check back later for updates. Keep following us for any updates. If you have any questions or requests, please don't hesitate to contact us.</p>
+               <hr>
+               <p class="mb-2 text-center"><a href="mailto:support@support.xxx" class="btn btn-outline-info mt-5" target="_blank" rel="noopener" aria-label="Write us email">Roadster Support Department</a></p>
             </div>
-          </div>
-        </div>
-      {% endfor %}
-      <!--Pagination section-->
-      <div class="col-12 mt-4">
-        {% if is_paginated %}
-          <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-              <li class="page-item">
-                <a class="page-link" href="?page=1">First</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a>
-              </li>
-            {% endif %}
-            
-            {% for num in page_obj.paginator.page_range %}
-              <li class="page-item {% if page_obj.number == num %}active{% endif %}">
-                <a class="page-link" href="?page={{ num }}">{{ num }}</a>
-              </li>
-            {% endfor %}
-            
-            {% if page_obj.has_next %}
-              <li class="page-item">
-                <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
-              </li>
-            {% endif %}
-          </ul>
-        {% endif %}
+         </div>
+         <!-- End of any records -->
+         {% endif %}
       </div>
-      <!--End of pagination-->
-    {% else %}
-    <!--If no any records-->
-      <div class="col-12">
-        <div class="alert alert-warning mt-5" role="alert">
-          <h4 class="alert-heading">Ooops!</h4>
-          <p>This category currently has no vehicles listed. Please browse other categories until new vehicles are added. Feel free to explore other options to find the right vehicle for you or check back later for updates. Keep following us for any updates. If you have any questions or requests, please don't hesitate to contact us.</p>
-          <hr>
-          <p class="mb-2 text-center"><a href="mailto:support@support.xxx" class="btn btn-outline-info mt-5" target="_blank" rel="noopener" aria-label="Write us email">Roadster Support Department</a></p>
-        </div>
-      </div>
-      <!-- End of any records -->
-    {% endif %}
-  </div>
-  </div>
+   </div>
 </section>
-
 {% endblock %}

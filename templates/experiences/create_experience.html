@@ -3,20 +3,18 @@
 {% load static %}
 {% block content %}
 {% include 'html_parts/hero.html' %}
-
 <!--Section create experience-->
 <section class="section-margin">
-<div class="container">
-    <h3>Create Experience</h3>
-    <div class="row mt-5">
-        <form method="post" enctype="multipart/form-data">
+   <div class="container">
+      <h3>Create Experience</h3>
+      <div class="row mt-5">
+         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form|crispy }}
             <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-    </div>
-</div>
+         </form>
+      </div>
+   </div>
 </section>
 <!--End of create experience-->
-
 {% endblock %}
