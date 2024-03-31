@@ -1,5 +1,5 @@
 // Emailjs script
-function sendMail() {
+function sendMail(form) {
     var params = {
         from_name: document.getElementById("name").value,
         surname: document.getElementById("surname").value,
@@ -13,19 +13,19 @@ function sendMail() {
 
     emailjs
         .send(serviceID, templateID, params)
-        .then( 
-            function (response) {
-                document.getElementById(
-                    "email-result"
-                ).innerHTML = `<p style="color:green;font-weight:bold">Thanks for your email!
-            <br> We will contact you as soon as possible!</p>`;
-            },
-            function (error) {
-                 document.getElementById(
-                    "email-result"
-                ).innerHTML = `<p style="color:green;font-weight:bold">Sorry, something went wrong!
-            <br> Try to send an email again.</p>`;
-            }
-        );
+        .then(function(response) {
+            document.getElementById("email-result").innerHTML = `<p style="color:green;font-weight:bold">Thanks for your email!<br>We will contact you as soon as possible!</p>`;
+            document.getElementsByClassName('loading')[0].style.display = 'none';
+        })
+        .catch(function(error) {
+            document.getElementById("email-result").innerHTML = `<p style="color:red;font-weight:bold">Sorry, something went wrong!<br>Try to send an email again.</p>`;
+            document.getElementsByClassName('loading')[0].style.display = 'none';
+        });
+
     return false;
 }
+document.getElementById("sendFormBtn").addEventListener("click", function(event) {
+    document.getElementsByClassName('loading')[0].style.display = 'block';
+    event.preventDefault();
+    sendMail(this.form);
+});

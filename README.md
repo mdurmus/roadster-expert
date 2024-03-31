@@ -1,4 +1,5 @@
-https://www.freeformatter.com/
+css formatter https://www.cleancss.com/css-beautify/
+html formatter https://www.freeformatter.com/
 
 live: https://roadster-expert-07714854e0e0.herokuapp.com/
 
