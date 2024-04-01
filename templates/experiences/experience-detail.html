@@ -10,6 +10,7 @@
       <div class="col-md-12 mb-3">
          {% if request.user.id == experience.user.id %}
          <a href="{% url 'update-experience' exp_id=experience.id %}" class="btn btn-block btn-warning">Update this experience</a>
+         <a href="{% url 'delete-experience' exp_id=experience.id %}" class="btn btn-block btn-danger">Delete this experience</a>
          {% endif %}
       </div>
    </div>

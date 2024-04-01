@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic
 from .models import Experience
 from .forms import ExperienceForm, UpdateExperienceForm
+from django.contrib import messages
+from django.urls import reverse
 
 
 class ExperienceList(generic.ListView):
@@ -95,3 +97,13 @@ def update_experience(request, exp_id):
             'page_name': 'Update Experience'
         }
     )
+
+
+def delete_experience(request, exp_id):
+    """
+    Delete Experience
+    """
+    experience = get_object_or_404(Experience, id=exp_id)
+    experience.delete()
+    messages.success(request, 'The experience was deleted successfully')
+    return redirect(reverse('my-experiences', kwargs={'user_id': request.user.id}))

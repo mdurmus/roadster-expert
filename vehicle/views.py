@@ -228,7 +228,8 @@ def searchform(request, **kwargs):
 
         context = {
             'search_query': search_query,
-            'search_results': search_result
+            'search_results': search_result,
+            'page_name': 'Search'
         }
 
         return render(request, 'vehicle/search.html', context)

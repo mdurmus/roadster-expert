@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import (ExperienceList, my_experiences,
                     experience_detail, create_experience,
-                    update_experience)
+                    update_experience,delete_experience)
 
 urlpatterns = [
     path(
@@ -30,4 +30,8 @@ urlpatterns = [
         'experience-detail/<int:exp_id>',
         experience_detail,
         name='experience-detail'),
+
+    path('delete-experience/<int:exp_id>',
+        delete_experience,
+        name='delete-experience'),
 ]

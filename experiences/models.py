@@ -46,7 +46,7 @@ class Experience(models.Model):
 
     created_on = models.DateTimeField(auto_now_add=True)
 
-    approved = models.BooleanField(default=False)
+    approved = models.BooleanField(default=True)
 
     class Meta:
         ordering = ["-created_on"]
