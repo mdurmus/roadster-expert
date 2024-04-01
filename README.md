@@ -21,7 +21,7 @@ You can find my web site [Roadster Expert](https://roadster-expert-07714854e0e0.
             + [Imagery](#imagery)
             + [Wireframes](#wireframes)
         + [Database Diagram](#database-diagram)
-        
+
 
 
 
@@ -120,3 +120,4 @@ I have drawn a few wireframes to get a close idea of what Wesbite will look like
 
 ## Database Diagram
 
+![Roadster Expert Database Diagram](/assets/database.png "Roadster Expert Database Diagram")
