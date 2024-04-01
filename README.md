@@ -11,11 +11,15 @@ You can find my web site [Roadster Expert](https://roadster-expert-07714854e0e0.
 
 + [Roadster Expert - Introduction](#roadster-expert---introduction)
     + [User Experience - UX](#user-experience---ux)
-        -[User Stories](#user-stories)
-        -[Agile Methodology](#agile-methodology)
-        -[The Scope](#the-scope)
-            *[Main Site Goals](#main-site-goals)
-        -[Design]
+        + [User Stories](#user-stories)
+        + [Agile Methodology](#agile-methodology)
+        + [The Scope](#the-scope)
+            + [Main Site Goals](#main-site-goals)
+        + [Design](#design)
+            + [Colours](#colours)
+            + [Typography](#typography)
+            + [Imagery](#imagery)
+            + [Wireframes](#wireframes)
 
 
 
@@ -75,10 +79,21 @@ All the features and development of this project were overseen through GitHub, w
 ## Design
 
 #### Colours
+
 ![Roadster Color Palette](/assets/roadster_color_palette.jpg "Roadster Color Palette")
+[Content Table](#content-table)
 
 I tried to benefit from approaches that describe the language of colors in my color selection.
+[Content Table](#content-table)
 
 #### Typography
 
+I used the 'Montserrat' font obtained from Google Fonts throughout my entire website.
+[Content Table](#content-table)
+
 #### Imagery
+
+The images have been selected to be as relevant as possible to the content. However, users can also add their own images.
+[Content Table](#content-table)
+
+#### Wireframes
