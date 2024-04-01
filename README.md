@@ -11,10 +11,11 @@ You can find my web site [Roadster Expert](https://roadster-expert-07714854e0e0.
 
 + [Roadster Expert - Introduction](#roadster-expert---introduction)
     + [User Experience - UX](#user-experience---ux)
-        +[User Stories](#user-stories)
-        +[Agile Methodology](#agile-methodology)
-        +[The Scope](#the-scope)
-            +[Main Site Goals](#main-site-goals)
+        -[User Stories](#user-stories)
+        -[Agile Methodology](#agile-methodology)
+        -[The Scope](#the-scope)
+            *[Main Site Goals](#main-site-goals)
+        -[Design]
 
 
 
@@ -68,3 +69,16 @@ All the features and development of this project were overseen through GitHub, w
 + To provide users with a visually pleasing website that is intuitive to use and easy to navigate.
 + To provide a website with a clear purpose.
 + To provide role-based permissions that allows user to interact with the website.
+
+[Content Table](#content-table)
+
+## Design
+
+#### Colours
+![Roadster Color Palette](/assets/roadster_color_palette.jpg "Roadster Color Palette")
+
+I tried to benefit from approaches that describe the language of colors in my color selection.
+
+#### Typography
+
+#### Imagery
