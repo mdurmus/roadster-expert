@@ -10,11 +10,11 @@
     <!--Vehicle image-->
     <div class="row mt-5 text-center">
       <div class="col-md-12">
-        <img class="vehicle-detail" 
-          style="width:100%;" 
-          src="{{ vehicle.featured_image.url }}" 
-          class="img-fluid" 
-          alt="{{ vehicle.title }}">
+        {% if "placeholder" in vehicle.featured_image.url %}
+            <img src="https://res.cloudinary.com/dpg6ubeyo/image/upload/v1711876938/nocar_avaxjp.jpg" class="card-img-top" alt="No Photo"> 
+          {% else %}
+            <img src="{{ vehicle.featured_image.url }}" style="width:100%;" class="vehicle-detail img-fluid" alt="{{ vehicle.title }}">
+        {% endif %}
         <div class="container mt-2">
           <div class="d-inline-block">
             {% if user.is_authenticated %}
