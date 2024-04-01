@@ -29,7 +29,12 @@
                <div class="accordion-body">
                   <div class="col-md-12">
                      <div class="row">
-                        <img src="{{ experience.featured_image.url }}" alt="Experience Vehicle">
+                        {% if "placeholder" in experience.featured_image.url %}
+                        <img src="https://res.cloudinary.com/dpg6ubeyo/image/upload/v1711876938/nocar_avaxjp.jpg" class="card-img-top" alt="No Photo"> 
+                      {% else %}
+                        <img style="width:100%;" class="img-fluid rounded-start" src="{{ experience.featured_image.url }}" alt="Experience Vehicle">
+                    {% endif %}
+                        
                      </div>
                   </div>
                </div>
