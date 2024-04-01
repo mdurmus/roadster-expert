@@ -1,5 +1,5 @@
-Marka Model Araba Id iliskilerini düzenle!
-Author'u kaldiralimmi?
+No profile hatasini code institute'ye sor.
+Google Page insight ve testler yapilacak test.md
 
 
 for antonio:

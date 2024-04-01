@@ -8,7 +8,8 @@ from django.urls import reverse
 
 class ExperienceList(generic.ListView):
     """
-    View listing user experiences.
+    View for listing approved user experiences,
+    excluding the experiences of the current user.
     """
     model = Experience
     template_name = 'experiences/experience_list.html'
@@ -58,6 +59,9 @@ def experience_detail(request, exp_id):
 
 
 def create_experience(request):
+    """
+    View for creating a new user experience.
+    """
     if request.method == 'POST':
         form = ExperienceForm(request.POST, request.FILES)
         if form.is_valid():
@@ -79,6 +83,9 @@ def create_experience(request):
 
 
 def update_experience(request, exp_id):
+    """
+    View for updating an existing user experience.
+    """
     experience = get_object_or_404(Experience, id=exp_id)
 
     if request.method == 'POST':
@@ -106,4 +113,5 @@ def delete_experience(request, exp_id):
     experience = get_object_or_404(Experience, id=exp_id)
     experience.delete()
     messages.success(request, 'The experience was deleted successfully')
-    return redirect(reverse('my-experiences', kwargs={'user_id': request.user.id}))
+    return redirect(reverse('my-experiences',
+                    kwargs={'user_id': request.user.id}))

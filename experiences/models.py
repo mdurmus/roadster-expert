@@ -7,6 +7,9 @@ User = get_user_model()
 
 
 class Experience(models.Model):
+    """
+    Model representing user experiences with vehicles.
+    """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     brand = models.CharField(
         max_length=20,
