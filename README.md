@@ -81,19 +81,23 @@ All the features and development of this project were overseen through GitHub, w
 #### Colours
 
 ![Roadster Color Palette](/assets/roadster_color_palette.jpg "Roadster Color Palette")
+
 [Content Table](#content-table)
 
 I tried to benefit from approaches that describe the language of colors in my color selection.
+
 [Content Table](#content-table)
 
 #### Typography
 
 I used the 'Montserrat' font obtained from Google Fonts throughout my entire website.
+
 [Content Table](#content-table)
 
 #### Imagery
 
 The images have been selected to be as relevant as possible to the content. However, users can also add their own images.
+
 [Content Table](#content-table)
 
 #### Wireframes
