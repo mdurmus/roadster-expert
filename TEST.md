@@ -38,8 +38,8 @@ The Testing.md file provides a comprehensive overview of the tests conducted on 
                 <td>All clear, no errors found</td>
                 <td>✅</td>
             </tr>
-            <tr>
-                <td rowspan="6">Experience</td>
+           <tr>
+                <td rowspan="6">Vehicle</td>
             </tr>
             <tr>
                 <td>Views</td>
