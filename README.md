@@ -10,8 +10,9 @@ You can find my web site [Roadster Expert](https://roadster-expert-07714854e0e0.
 
 
 + [Roadster Expert - Introduction](#roadster-expert---introduction)
-+ [Content Table](#content-table)
     + [User Experience - UX](#user-experience---ux)
+        +[User Stories](#user-stories)
+        +[Agile Methodology](#)
 
 
 
@@ -51,3 +52,9 @@ You can find my web site [Roadster Expert](https://roadster-expert-07714854e0e0.
 6. Change the website permissions for a user.
 
 [Content Table](#content-table)
+
+## Agile Methodology
+All the features and development of this project were overseen through GitHub, where you can find the [Projects](https://github.com/users/mdurmus/projects/4) section.
+
+[Content Table](#content-table)
+
