@@ -50,7 +50,7 @@ class Experience(models.Model):
 
     class Meta:
         ordering = ["-created_on"]
-        verbose_name_plural = 'My Experiences'
+        verbose_name_plural = 'Experiences'
 
     def __str__(self):
         return f"Brand: {self.brand} model: {self.model}"
