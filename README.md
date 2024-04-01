@@ -30,10 +30,14 @@ You can find my web site [Roadster Expert](https://roadster-expert-07714854e0e0.
             + [All Experiences](#all-experiences)
             + [Create Experience](#create-experience)
             + [Experience Detail](#experience-detail)
-            + [About](#about)
             + [Search](#search)
+            + [About](#about)
             + [Contact](#contact)
+            + [Profile](#profile)
             + [Navbar](#navbar)
+            + [Sign In](#)
+            + [Sign Out](#)
+            + [Sign Up]()
 
 
 
@@ -247,3 +251,20 @@ This is the page where registered users update their information.
 
 [Content Table](#content-table)
 
+### Sign In
+
+![Roadster Expert Sign In](/assets/pages/signin.jpg "Roadster Expert Sign In")
+
+[Content Table](#content-table)
+
+### Sign Out
+
+![Roadster Expert Sign Out](/assets/pages/signout.jpg "Roadster Expert Sign Out")
+
+[Content Table](#content-table)
+
+### Sign Up
+
+![Roadster Expert Sign Up](/assets/pages/signup.jpg "Roadster Expert Sign Up")
+
+[Content Table](#content-table)
