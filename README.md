@@ -11,39 +11,41 @@ You can find my web site [Roadster Expert](https://roadster-expert-07714854e0e0.
 
 + [Roadster Expert - Introduction](#roadster-expert---introduction)
 + [Test](#content-table)
-    + [User Experience - UX](#user-experience)
-+ [Yeni Baslik](#yeni-baslik)
+    + [User Experience - UX](#user-experience---ux)
 
 
 
 
 
-css formatter https://www.cleancss.com/css-beautify/
-html formatter https://www.freeformatter.com/
+# User Experience - UX
 
-live: https://roadster-expert-07714854e0e0.herokuapp.com/
+## User Stories
 
-Bug: in admin area search fields didnt work changed in admin py searchfields criteria file will upload.
++ As a website user, I can:
 
-Min/max value validator
-email validator
-verbose name validator
- : https://docs.djangoproject.com/en/5.0/ref/validators/
+1. Easily navigate around the site. 
+2. View a list of vehicles and select a vehicle detail to read.
+3. Search for a specific vehicle.
+4. Open a post to read the details.
+5. Create an account to get members features.
+6. View the number of likes on a post.
+7. View comments on a post.
 
-contact form from: https://github.com/soukasamadi/Smoothies-blog/blob/main/templates/recipes/contact.html
++ As logged in website user, I can:
 
-content processor: https://a4u.medium.com/context-processor-in-django-62818f14d88f#:~:text=In%20Django%2C%20a%20context%20processor%20is%20a%20Python%20function%20that,rendered%20by%20your%20Django%20application.
+1. Like and unlike vehicles.
+2. Comment on vehicles.
+3. Delete or edit my previous comments.
+4. Update my profile informations.
+5. Share my driving experiences.
+6. Edit or delete my previously experience.
+7. Logout from the website.
 
-for custom error page: https://www.youtube.com/watch?v=oX_XKlPJAQk
++ As a website superuser, I can:
 
-
-# User Experience
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 311 bytes | 311.00 KiB/s, done.
-Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
-To https://github.com/mdurmus/roadster-expert.git
-
-## Yeni Baslik
-What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+1. Create and publish a new Category / Brand / Model / Vehicle.
+2. Create draft vehicle posts that can be reviewed and finalised later.
+3. Create/Delete a new user, categories, brand, model, vehicle, experiences.
+4. Approve user's comments.
+5. Delete user's experiences that was posted previously.
+6. Change the website permissions for a user.
