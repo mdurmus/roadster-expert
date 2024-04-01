@@ -9,8 +9,8 @@ You can find my web site [Roadster Expert](https://roadster-expert-07714854e0e0.
 # Content Table
 
 <ul>
-<li>[Roadster Expert - Introduction](#Roadster-Expert---Introduction)</li>
-<li>[Test](#Content-Table)</li>
+<li>[Roadster Expert - Introduction](#Roadster_Expert___Introduction)</li>
+<li>[Test](#Content_Table)</li>
 <li></li>
 <li></li>
 <li></li>
