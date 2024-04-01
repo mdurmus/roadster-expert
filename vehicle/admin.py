@@ -25,7 +25,7 @@ class CommentAdmin(SummernoteModelAdmin):
 
 @admin.register(Vehicle)
 class VehicleAdmin(SummernoteModelAdmin):
-    list_display = ('category', 'brand', 'model', 'status')
+    list_display = ('category',  'model', 'status') #'brand',
     search_fields = ('brand__brand', 'model__model')
     prepopulated_fields = {'slug': ('title',)}
     list_filter = ('status', 'created_on')
