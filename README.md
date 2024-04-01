@@ -318,7 +318,7 @@ As superuser I can also approve comments, experience, posts and change the statu
 
 ### Future Features
 
-I would like to add a favorite feature where logged-in users can add their own vehicles to their favorite list, so that they can easily check their favorite vehicles anytime.
+I want to add a favorite feature where logged-in users can add their own vehicles to their favorite list, so that they can easily check their favorite vehicles anytime. Additionally, I can enable the share button on the experience-detail page to allow sharing in posts.
 
 # Technologies Used
 
