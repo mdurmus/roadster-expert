@@ -305,6 +305,7 @@ I would like to add a favorite feature where logged-in users can add their own v
      [Javascript](https://www.javascript.com "Javascript")
      [Django](https://www.djangoproject.com "Django Official")
      [Python](https://www.python.org "Python Offical")
+    [Duck Duck Go](https://duckduckgo.com)
 
 [Content Table](#content-table)
 
