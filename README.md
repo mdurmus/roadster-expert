@@ -35,9 +35,13 @@ You can find my web site [Roadster Expert](https://roadster-expert-07714854e0e0.
             + [Contact](#contact)
             + [Profile](#profile)
             + [Navbar](#navbar)
-            + [Sign In](#)
-            + [Sign Out](#)
-            + [Sign Up]()
+            + [Sign In](#sign-in)
+            + [Sign Out](#sign-out)
+            + [Sign Up](#sign-up)
+        + [Admin Screen](#admin-screen)
+            + [Future Features](#future-features)
+        + [Technologies Used](#technologies-used)
+            + [Languages Used](#languages-used)
 
 
 
@@ -268,3 +272,41 @@ This is the page where registered users update their information.
 ![Roadster Expert Sign Up](/assets/pages/signup.jpg "Roadster Expert Sign Up")
 
 [Content Table](#content-table)
+
+
+## Admin Screen
+
+here admin screen
+
+On the Admin Panel, as an admin/superuser I have full access to CRUD functionality so I can view, create, edit and delete the following ones:
+
+- Brand
+- Model
+- Categories
+- Vehicles
+- Comments
+- Experience
+- Profiles
+
+As superuser I can also approve comments, experience, posts and change the status and give other permissions to the users.
+
+[Content Table](#content-table)
+
+### Future Features
+
+I would like to add a favorite feature where logged-in users can add their own vehicles to their favorite list, so that they can easily check their favorite vehicles anytime.
+
+## Technologies Used
+
+### Languages Used
+
+    - [HTML5](https://en.wikipedia.org/wiki/HTML/)
+    - [CSS3](https://en.wikipedia.org/wiki/CSS)
+    - [Javascript](https://www.javascript.com/)
+    - [Django](https://www.djangoproject.com/)
+    - [Python](https://www.python.org/)
+
+[Content Table](#content-table)
+
+## Django Packages
+
