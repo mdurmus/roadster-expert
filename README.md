@@ -300,9 +300,9 @@ I would like to add a favorite feature where logged-in users can add their own v
 
 ### Languages Used
 
-[HTML5](https://en.wikipedia.org/wiki/HTML "Html5 Wikipedia")
+- [HTML5](https://en.wikipedia.org/wiki/HTML "Html5 Wikipedia")
 
-[CSS3](https://en.wikipedia.org/wiki/CSS "CSS Wikipedia")
+- [CSS3](https://en.wikipedia.org/wiki/CSS "CSS Wikipedia")
 
 [Javascript](https://www.javascript.com "Javascript")
 
