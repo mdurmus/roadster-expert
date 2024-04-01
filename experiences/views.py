@@ -5,16 +5,18 @@ from .forms import ExperienceForm, UpdateExperienceForm
 
 
 class ExperienceList(generic.ListView):
+    """
+    View listing user experiences.
+    """
     model = Experience
     template_name = 'experiences/experience_list.html'
     context_object_name = 'experiences'
 
-
-def get_queryset(self):
-    user = self.request.user
-    return Experience.objects.filter(approved=True) \
-                             .exclude(user=user) \
-                             .order_by('-created_on')
+    def get_queryset(self):
+        user = self.request.user
+        return Experience.objects.filter(approved=True) \
+                                 .exclude(user=user) \
+                                 .order_by('-created_on')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -23,6 +25,9 @@ def get_queryset(self):
 
 
 def my_experiences(request, user_id):
+    """
+    View displaying logged-in user experiences.
+    """
     user_experiences = Experience.objects.filter(user_id=user_id,
                                                  approved=True)
     return render(
@@ -36,6 +41,9 @@ def my_experiences(request, user_id):
 
 
 def experience_detail(request, exp_id):
+    """
+    View displaying the details of a single experience.
+    """
     experience = get_object_or_404(Experience, id=exp_id)
     return render(
         request,
