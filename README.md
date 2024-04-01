@@ -38,6 +38,8 @@ You can find my web site [Roadster Expert](https://roadster-expert-07714854e0e0.
             + [Sign In](#sign-in)
             + [Sign Out](#sign-out)
             + [Sign Up](#sign-up)
+            + [404 Page](#404-page)
+            + [500 Page](#500-page)
         + [Admin Screen](#admin-screen)
             + [Future Features](#future-features)
         + [Technologies Used](#technologies-used)
@@ -284,6 +286,17 @@ This is the page where registered users update their information.
 
 [Content Table](#content-table)
 
+### 404 Page
+
+![Roadster Expert 404 Page](/assets/pages/404.jpg "Roadster Expert 404 Page")
+
+[Content Table](#content-table)
+
+### 500 Page
+
+![Roadster Expert 500 Page](/assets/pages/404.jpg "Roadster Expert 500 Page")
+
+[Content Table](#content-table)
 
 ## Admin Screen
 
