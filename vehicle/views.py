@@ -221,7 +221,7 @@ def profile(request):
 
 def searchform(request, **kwargs):
     """
-    Search View 
+    Search View
     """
     if request.method == 'POST':
         search_query = request.POST.get('search_query', '')

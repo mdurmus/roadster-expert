@@ -42,6 +42,7 @@ You can find my web site [Roadster Expert](https://roadster-expert-07714854e0e0.
             + [500 Page](#500-page)
         + [Admin Screen](#admin-screen)
             + [Future Features](#future-features)
+        + [Testing](#testing)
         + [Technologies Used](#technologies-used)
             + [Languages Used](#languages-used)
                 + [Django Packages](#django-packages)
@@ -319,6 +320,12 @@ As superuser I can also approve comments, experience, posts and change the statu
 ### Future Features
 
 I want to add a favorite feature where logged-in users can add their own vehicles to their favorite list, so that they can easily check their favorite vehicles anytime. Additionally, I can enable the share button on the experience-detail page to allow sharing in posts.
+
+## Testing
+
+   Testing detail [here](TEST.md)
+
+[Content Table](#content-table)
 
 # Technologies Used
 

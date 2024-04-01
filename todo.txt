@@ -1,6 +1,2 @@
 No profile hatasini code institute'ye sor.
 Google Page insight ve testler yapilacak test.md
-
-
-for antonio:
-hem you are here hemde, h3 baslik bilgisi mantiklimi birini sileyimmi?
