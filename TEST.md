@@ -13,7 +13,7 @@ The Testing.md file provides a comprehensive overview of the tests conducted on 
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th>Proje</th>
+                <th>App</th>
                 <th>Tested</th>
                 <th>Result</th>
                 <th>Pass</th>
@@ -24,55 +24,35 @@ The Testing.md file provides a comprehensive overview of the tests conducted on 
                 <td rowspan="6">Experience</td>
             </tr>
             <tr>
-                <td>views</td>
+                <td>Views</td>
                 <td>All clear, no errors found</td>
                 <td>✅</td>
             </tr>
             <tr>
-                <td>models</td>
-                <td>line too long</td>
-                <td>✅</td>
-            </tr>
-            <tr>
-                <td>views</td>
+                <td>Models</td>
                 <td>All clear, no errors found</td>
                 <td>✅</td>
             </tr>
             <tr>
-                <td>forms</td>
+                <td>Forms</td>
                 <td>All clear, no errors found</td>
                 <td>✅</td>
             </tr>
             <tr>
-                <td>signals</td>
-                <td>All clear, no errors found</td>
-                <td>✅</td>
-            </tr>
-           <tr>
                 <td rowspan="6">Experience</td>
             </tr>
             <tr>
-                <td>views</td>
+                <td>Views</td>
                 <td>All clear, no errors found</td>
                 <td>✅</td>
             </tr>
             <tr>
-                <td>models</td>
-                <td>line too long</td>
-                <td>✅</td>
-            </tr>
-            <tr>
-                <td>views</td>
+                <td>Models</td>
                 <td>All clear, no errors found</td>
                 <td>✅</td>
             </tr>
             <tr>
-                <td>forms</td>
-                <td>All clear, no errors found</td>
-                <td>✅</td>
-            </tr>
-            <tr>
-                <td>signals</td>
+                <td>Forms</td>
                 <td>All clear, no errors found</td>
                 <td>✅</td>
             </tr>
