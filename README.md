@@ -300,11 +300,11 @@ I would like to add a favorite feature where logged-in users can add their own v
 
 ### Languages Used
 
-    - [HTML5](https://en.wikipedia.org/wiki/HTML/)
-    - [CSS3](https://en.wikipedia.org/wiki/CSS)
-    - [Javascript](https://www.javascript.com/)
-    - [Django](https://www.djangoproject.com/)
-    - [Python](https://www.python.org/)
+     [HTML5](https://en.wikipedia.org/wiki/HTML "Html5 Wikipedia")
+     [CSS3](https://en.wikipedia.org/wiki/CSS "CSS Wikipedia")
+     [Javascript](https://www.javascript.com "Javascript")
+     [Django](https://www.djangoproject.com "Django Official")
+     [Python](https://www.python.org "Python Offical")
 
 [Content Table](#content-table)
 
