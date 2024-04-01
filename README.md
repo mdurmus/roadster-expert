@@ -224,7 +224,7 @@ On this page, you can access the Roadster Expert club with a single click, or yo
 
 ### Profile
 
-![Roadster Expert Profile](/assets/pages/profile.jpg" Roadster Expert Profile")
+![Roadster Expert Profile](/assets/pages/profile.jpg "Roadster Expert Profile")
 
 This is the page where registered users update their information.
 
