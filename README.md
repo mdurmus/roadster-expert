@@ -21,9 +21,20 @@ You can find my web site [Roadster Expert](https://roadster-expert-07714854e0e0.
             + [Imagery](#imagery)
             + [Wireframes](#wireframes)
         + [Database Diagram](#database-diagram)
-
-
-
+        + [Features](#features)
+            + [Home Page](#home-page)
+            + [All Categories](#all-categories)
+            + [Blank Category](#blank-category)
+            + [A Category](#a-category)
+            + [Vehicle Detail](#vehicle-detail)
+            + [All Experiences](#all-experiences)
+            + [Create Experience](#create-experience)
+            + [Experience Detail](#experience-detail)
+            + [](#)
+            + [](#)
+            + [](#)
+            + [About](#about)
+            + [Contact](#contact)
 
 
 
@@ -121,3 +132,101 @@ I have drawn a few wireframes to get a close idea of what Wesbite will look like
 ## Database Diagram
 
 ![Roadster Expert Database Diagram](/assets/database.png "Roadster Expert Database Diagram")
+
+[Content Table](#content-table)
+
+## Features
+
+I tried to share only the images related to the desktop view under this heading.
+
+[Content Table](#content-table)
+
+### Home Page
+
+![Roadster Expert Home Page](/assets/pages/home.jpg "Roadster Expert Home Page")
+
+On the homepage, we encounter a simple and elegant slider that greets us. Just below, we come across a paragraph explaining why you should work with Roadster Expert. Everything is changing so fast, and we wanted to keep you informed by adapting to this change on our homepage.
+
+[Content Table](#content-table)
+
+
+### All Categories)
+
+![Roadster Expert All Categories](/assets/pages/allVehicles.jpg "Roadster Expert All Categories")
+
+This is the page where all registered categories are listed, and you can select the ones you want to see the registered vehicles.
+
+[Content Table](#content-table)
+
+### Blank Category
+
+![Roadster Expert Blank Category](/assets/pages/blankCategory.jpg "Roadster Expert Blank Category")
+
+If the admin has created a category but hasn't added any vehicles into it, this is the page you will see. You can also notify us by writing an email on this page if you wish.
+
+[Content Table](#content-table)
+
+### A Category
+
+![Roadster Expert A Category](/assets/pages/category.jpg "Roadster Expert A Category")
+
+As you might expect, you're viewing a category where many vehicles have been saved by the admin. If there are more vehicle records than can fit on one page, Django's pagination technique will take you to the other vehicles.
+
+[Content Table](#content-table)
+
+### Vehicle Detail
+
+![Roadster Expert Vehicle Detail](/assets/pages/vehicle_detail.jpg "Roadster Expert Vehicle Detail")
+
+Firstly, we encounter a brief overview of the relevant vehicle. Then, we see a stunning image of the vehicle. We observe how many times registered users have liked this vehicle. Its technical specifications are summarized in a table, followed by detailed information about the vehicle. Towards the end of the page, you can see the comments made by registered users for this vehicle. If a registered user is logged in, they can edit or delete their own comment.
+
+[Content Table](#content-table)
+
+### All Experiences
+
+![Roadster Expert All Experiences](/assets/pages/allExperiences.jpg "Roadster Expert All Experiences")
+
+This is the page where registered users can list their experiences. A summary table appears with keywords such as username, brand, model and date.
+
+[Content Table](#content-table)
+
+### Create Experience
+
+![Roadster Expert Create Experience](/assets/pages/createExp.jpg "Roadster Expert Create Experience")
+
+This is the page where our registered users share their experiences.
+
+[Content Table](#content-table)
+
+### Experience Detail
+
+![Roadster Expert Experience Detail](/assets/pages/experienceDetail.jpg "Roadster Expert Experience Detail")
+
+A page where the indescribable but essential emotions are attempted to be defined. As another member of the club, you can connect with the kidi who experienced this and maybe chat or even experience it yourself.
+
+[Content Table](#content-table)
+
+### About
+
+![Roadster Expert About](/assets/pages/about.jpg "Roadster Expert About")
+
+This is the page where information about the establishment purpose of the Roadster Expert club and its members is presented.
+
+[Content Table](#content-table)
+
+### Contact
+
+![Roadster Expert Contact](/assets/pages/contact.jpg "Roadster Expert Contact")
+
+On this page, you can access the Roadster Expert club with a single click, or you can also send an email to the club by filling out the contact form. You can also track the process of sending this email in real-time using the snippet above.
+
+[Content Table](#content-table)
+
+### Profile
+
+![Roadster Expert Profile](/assets/pages/profile.jpg" Roadster Expert Profile")
+
+This is the page where registered users update their information.
+
+[Content Table](#content-table)
+
