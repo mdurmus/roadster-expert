@@ -10,7 +10,7 @@ You can find my web site [Roadster Expert](https://roadster-expert-07714854e0e0.
 
 
 + [Roadster Expert - Introduction](#roadster-expert---introduction)
-+ [Test](#content-table)
++ [Content Table](#content-table)
     + [User Experience - UX](#user-experience---ux)
 
 
@@ -49,3 +49,5 @@ You can find my web site [Roadster Expert](https://roadster-expert-07714854e0e0.
 4. Approve user's comments.
 5. Delete user's experiences that was posted previously.
 6. Change the website permissions for a user.
+
+[Content Table](#content-table)
