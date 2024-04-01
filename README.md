@@ -42,6 +42,17 @@ You can find my web site [Roadster Expert](https://roadster-expert-07714854e0e0.
             + [Future Features](#future-features)
         + [Technologies Used](#technologies-used)
             + [Languages Used](#languages-used)
+                + [Django Packages](#django-packages)
+            + [Framework - Libraries - Programs Used](#framework-libraries-programs-used)
+        + [Creating the Django app](#creating-the-django-app)
+        + [Deployment of this Project](#deployment-of-this-project)
+        + [Final Deployment](#final-deployment)
+        + [Forking this Project](#forking-this-project)
+        + [Cloning this Project](#cloning-this-project)
+        + [Credits](#credits)
+            + [Content](#content)
+        + [Special Thanks](#special-thanks)
+
 
 
 
@@ -276,7 +287,7 @@ This is the page where registered users update their information.
 
 ## Admin Screen
 
-here admin screen
+![Roadster Expert Admin](/assets/pages/admin.jpg "Roadster Expert Admin")
 
 On the Admin Panel, as an admin/superuser I have full access to CRUD functionality so I can view, create, edit and delete the following ones:
 
@@ -296,9 +307,9 @@ As superuser I can also approve comments, experience, posts and change the statu
 
 I would like to add a favorite feature where logged-in users can add their own vehicles to their favorite list, so that they can easily check their favorite vehicles anytime.
 
-## Technologies Used
+# Technologies Used
 
-### Languages Used
+## Languages Used
 
 - [HTML5](https://en.wikipedia.org/wiki/HTML "Html5 Wikipedia")
 
@@ -314,5 +325,102 @@ I would like to add a favorite feature where logged-in users can add their own v
 
 [Content Table](#content-table)
 
-## Django Packages
+### Django Packages
 
+- [Gunicorn](https://gunicorn.org/)
+   As the sever for Heroku
+
+- [Cloudinary](https://cloudinary.com/)
+   Was used to host the static files and media
+
+- [Dj_database_url](https://pypi.org/project/dj-database-url/) 
+   To parse the database URL from the environment variables in Heroku
+
+- [Psycopg2](https://pypi.org/project/psycopg2/)
+   As an adaptor for Python and PostgreSQL databases
+
+- [Summernote](https://summernote.org/)
+   As a text editor
+
+- [Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
+   For authentication, registration, account management
+
+- [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+   To style the forms
+
+## Framework - Libraries - Programs
+
+- [Bootstrap](https://getbootstrap.com/)
+   Was used to style the website, add responsiveness and interactivity
+
+- [Jquery](https://jquery.com/)
+   All the scripts were written using jquery library
+
+- [Git](https://git-scm.com/)
+   Git was used for version control by utilizing the Gitpod terminal to commit to Git and push to GitHub
+
+- [GitHub](https://github.com/)
+   GitHub is used to store the project's code after being pushed from Git
+
+- [Heroku](https://id.heroku.com/)
+   Heroku was used to deploy the live project
+
+- [PostgreSQL](https://www.postgresql.org/)
+   Database used through heroku.
+
+- [VSCode](https://code.visualstudio.com/)
+   VSCode was used to create and edit the website
+
+- [Lucidchart](https://lucid.app/)
+   Lucidchart was used to create the database diagram
+
+- [PEP8](https://pep8ci.herokuapp.com/)
+   PEP8CI was used to validate all the Python code
+
+- [W3C - HTML](https://validator.w3.org/)
+   W3C- HTML was used to validate all the HTML code
+
+- [W3C - CSS](https://jigsaw.w3.org/css-validator/)
+   W3C - CSS was used to validate the CSS code
+
+- [Fontawesome](https://fontawesome.com/)
+   To add icons to the website
+
+- [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/)
+   To check App responsiveness and debugging
+
+- [Emailjs](https://www.emailjs.com/)
+   To send emails from the contact form
+
+# Creating the Django app
+
++ Go to the Code Institute Gitpod Full Template Template
++ Click on Use This Template
++ Once the template is available in your repository click on Gitpod
++ When the image for the template and the Gitpod are ready open a new terminal to start a new Django App
++ Install Django and gunicorn: pip3 install django gunicorn
++ Install supporting database libraries dj_database_url and psycopg2 library: pip3 install dj_database_url psycopg2
++ Create file for requirements: in the terminal window type pip freeze --local > requirements.txt
++ Create project: in the terminal window type django-admin startproject your_project_name
++ Create app: in the terminal window type python3 manage.py startapp your_app_name
++ Add app to the list of installed apps in settings.py file: you_app_name
++ Migrate changes: in the terminal window type python3 manage.py migrate
++ Run the server to test if the app is installed, in the terminal window type python3 manage.py runserver
++ If the app has been installed correctly the window will display The install worked successfully! Congratulations!
+
+[Content Table](#content-table)
+
+
+# Deployment of this Project
+
+# Final Deployment
+
+# Forking this Project
+
+# Cloning this Project
+
+# Credits
+
+## Content
+
+# Special Thanks
