@@ -11,8 +11,10 @@ You can find my web site [Roadster Expert](https://roadster-expert-07714854e0e0.
 
 + [Roadster Expert - Introduction](#roadster-expert---introduction)
     + [User Experience - UX](#user-experience---ux)
-        +[User Stories](#user-stories)
-        +[Agile Methodology](#agile-methodology)
+        -[User Stories](#user-stories)
+        -[Agile Methodology](#agile-methodology)
+        -[The Scope](#the-scope)
+            +[Main Site Goals](#main-site-goals)
 
 
 
@@ -58,3 +60,11 @@ All the features and development of this project were overseen through GitHub, w
 
 [Content Table](#content-table)
 
+### The Scope
+
+#### Main Site Goals
+
++ To provide users with a good experience when using the website.
++ To provide users with a visually pleasing website that is intuitive to use and easy to navigate.
++ To provide a website with a clear purpose.
++ To provide role-based permissions that allows user to interact with the website.
