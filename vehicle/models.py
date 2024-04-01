@@ -11,7 +11,7 @@ User = get_user_model()
 
 class Profile(models.Model):
     """
-    Model file for User profile object
+    Model for User profile object
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     image = CloudinaryField('image')
@@ -22,7 +22,7 @@ class Profile(models.Model):
 
 class Category(models.Model):
     """
-    Model for vehicle category object
+    Model representing a category.
     """
     title = models.CharField(max_length=50)
     category_image = CloudinaryField('image', default='placeholder')
@@ -141,7 +141,7 @@ class Vehicle(models.Model):
 
 class Comment(models.Model):
     """
-    Model for Vehicle objects
+    Model for Vehicle's objects
     """
     vehicle = models.ForeignKey(
                                 Vehicle,
@@ -168,7 +168,7 @@ class Comment(models.Model):
 
 class Author(models.Model):
     """
-    Model for Author object
+    Model representing an author.
     """
     user = models.OneToOneField(
         User,

@@ -27,6 +27,9 @@ class Home(generic.TemplateView):
 
 
 class CategoryListView(ListView):
+    """
+    View for listing categories.
+    """
     template_name = 'vehicle/categories.html'
     model = Category
     context_object_name = 'categories'
@@ -42,10 +45,9 @@ class CategoryListView(ListView):
 
 
 class ListVehicleInCategoryListView(ListView):
-    '''
+    """
     List all vehicle in a category
-    '''
-
+    """
     template_name = 'vehicle/category_vehicles.html'
     model = Vehicle
     context_object_name = 'vehicles'
@@ -63,26 +65,25 @@ class ListVehicleInCategoryListView(ListView):
 
 
 def about(request):
-    '''
+    """
     About page
-    '''
+    """
     context = {'page_name': 'About Us'}
     return render(request, 'vehicle/about.html', context)
 
 
 def contact(request):
-    '''
+    """
     Contact page
-    '''
+    """
     context = {'page_name': 'Contact Us'}
     return render(request, 'vehicle/contact.html', context)
 
 
 class VehicleDetail(View):
-    '''
+    """
     Render post details
-    '''
-
+    """
     def get(self, request, *args, **kwargs):
         slug = kwargs.get('slug')
         print(slug)
@@ -174,9 +175,9 @@ def delete_comment(request, comment_id):
 
 
 class PostLike(View):
-    '''
+    """
     For like a vehicle
-    '''
+    """
     def post(self, request, slug):
         vehicle = get_object_or_404(Vehicle, slug=slug)
 
@@ -192,6 +193,9 @@ class PostLike(View):
 
 @login_required
 def profile(request):
+    """
+    Profile View
+    """
     if request.method == 'POST':
         user_form = UserUpdateForm(request.POST, instance=request.user)
         profile_form = ProfileUpdateForm(
@@ -217,7 +221,7 @@ def profile(request):
 
 def searchform(request, **kwargs):
     """
-    search
+    Search View 
     """
     if request.method == 'POST':
         search_query = request.POST.get('search_query', '')
