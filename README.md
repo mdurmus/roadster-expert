@@ -413,14 +413,66 @@ I would like to add a favorite feature where logged-in users can add their own v
 
 # Deployment of this Project
 
++ Log in to [Heroku](https://www.heroku.com) or create an account
++ On the main page click the button labelled New in the top right corner and from the drop-down menu select Create New App
++ You must enter a unique app name
++ Next select your region
++ Click on the Create App button
++ Click in resources and select Heroku Postgres database
++ Click Reveal Config Vars and add a new record with SECRET_KEY
++ Click Reveal Config Vars and add a new record with the CLOUDINARY_URL
++ Click Reveal Config Vars and add a new record with the `DISABLE_COLLECTSTATIC = 1`
++ The next page is the project’s Deploy Tab. Click on the Settings Tab and scroll down to Config Vars
++ Next, scroll down to the Buildpack section click Add Buildpack select python and click Save Changes
++ Scroll to the top of the page and choose the Deploy tab
++ Select Github as the deployment method
++ Confirm you want to connect to GitHub
++ Search for the repository name and click the connect button
++ Scroll to the bottom of the deploy page and select the preferred deployment type
++ Click either Enable Automatic Deploys for automatic deployment when you push updates to Github
+
+[Content Table](#content-table)
+
 # Final Deployment
+
++ Create a runtime.txt **python-3.8.13**
++ Create a Procfile `web: gunicorn your_project_name.wsgi`
++ When development is complete change the debug setting to: `DEBUG = False` in settings.py
++ In this project the summernote editor was used so for this to work in Heroku add: `X_FRAME_OPTIONS = SAMEORIGIN` to settings.py.
++ In Heroku settings, delete the config vars for `DISABLE_COLLECTSTATIC = 1`
+
+[Content Table](#content-table)
 
 # Forking this Project
 
++ Open [GitHub](https://www.github.com)
++ Find the 'Fork' button at the top right of the page
++ Once you click the button the fork will be in your repository
+
+[Content Table](#content-table)
+
 # Cloning this Project
+
++ Open [GitHub](https://www.github.com)
++ You will be provided with three options to choose from, HTTPS, SSH or + GitHub CLI, click the clipboard icon in order to copy the URL
++ Once you click the button the fork will be in your repository
++ Open a new terminal
++ Change the current working directory to the location that you want the cloned directory
++ Type 'git clone' and paste the URL copied in step 3
++ Press 'Enter' and the project is cloned
 
 # Credits
 
 ## Content
 
++ All text generated from Chat GPT
+
++ All images from [Adobe Stock](https://www.adobestock.com)
+
++ Colors and logo files that i downloaded for free from the internet.
+
 # Special Thanks
+
+I would like to express my endless gratitude to [soukasamadi](https://github.com/soukasamadi/), a valued member of Code Institute, whose significant contributions have been instrumental in the preparation of this project.
+
+I would also like to thank my mentor, Antonio Rodriguez, for their valuable insights.
