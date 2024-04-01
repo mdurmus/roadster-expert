@@ -304,13 +304,13 @@ I would like to add a favorite feature where logged-in users can add their own v
 
 - [CSS3](https://en.wikipedia.org/wiki/CSS "CSS Wikipedia")
 
-[Javascript](https://www.javascript.com "Javascript")
+- [Javascript](https://www.javascript.com "Javascript")
 
-[Django](https://www.djangoproject.com "Django Official")
+- [Django](https://www.djangoproject.com "Django Official")
 
-[Python](https://www.python.org "Python Offical")
+- [Python](https://www.python.org "Python Offical")
 
-[Duck Duck Go](https://duckduckgo.com)
+- [Duck Duck Go](https://duckduckgo.com)
 
 [Content Table](#content-table)
 
