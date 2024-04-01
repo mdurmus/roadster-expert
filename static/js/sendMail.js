@@ -24,8 +24,14 @@ function sendMail(form) {
 
     return false;
 }
-document.getElementById("sendFormBtn").addEventListener("click", function(event) {
+
+
+var button = document.getElementById("sendFormBtn");
+
+if (button) {
+button.addEventListener("click", function() {
     document.getElementsByClassName('loading')[0].style.display = 'block';
     event.preventDefault();
     sendMail(this.form);
 });
+}
