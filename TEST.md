@@ -4,6 +4,7 @@ You can find [here](README.md) main readme file.
 
 ## Content
 
+*   [Manual Test Reult](#manual-testing)
 *   [Pep8 Validation](#pep8-validation)
 *   [Google Lighthouse](#google-lighthouse)
 *   [Html Validation](#html-validation)
@@ -11,6 +12,12 @@ You can find [here](README.md) main readme file.
 *   [CSS Validator](#css-validator)
 *   [Error Pages](#error-pages)
 *   [Bugs](#bugs)
+
+## Manual Testing
+
+[Manual Test Result](https://docs.google.com/spreadsheets/d/1FFb9x46S-sRSw2KCKdNDCbpSLUJEDHrd/edit?usp=drive_link&ouid=117671076170825861177&rtpof=true&sd=true)
+
+[Content](#content)
 
 ## Pep8 Validation
 
