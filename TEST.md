@@ -56,4 +56,14 @@ The image above displays the mobile device result of Google Lighthouse.
 
 ![Roadster CSS](/assets/validators/css_validator.png "Roadster CSS")
 
+## Error Pages
+
+I have included pages to handle HTTP errors with status codes 400 and 505 in my project. However, for requests that do not match URL patterns, my 404 page is displayed. This is a standard response provided when users request pages with URLs that do not exist or are incorrect. It allows users to notice missing or incorrect URLs and be directed to the correct page.
+
+In case of an HTTP 500 error, the server encounters an internal error and is unable to handle the request properly. This could occur due to various reasons such as bugs in the server-side code, database connection issues, or insufficient server resources. In such situations, users may encounter a generic error page indicating that something has gone wrong on the server side.
+
+[ErrorPages](readme.md#error-pages)
+
+
+
 
