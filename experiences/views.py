@@ -13,7 +13,7 @@ class ExperienceList(generic.ListView):
     """
     model = Experience
     template_name = 'experiences/experience_list.html'
-    
+
     context_object_name = 'experiences'
 
     def get_queryset(self):

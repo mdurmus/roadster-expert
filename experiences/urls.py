@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import (ExperienceList, my_experiences,
                     experience_detail, create_experience,
-                    update_experience,delete_experience)
+                    update_experience, delete_experience)
 
 urlpatterns = [
     path(
@@ -20,7 +20,7 @@ urlpatterns = [
         'experiences/',
         ExperienceList.as_view(),
         name='experiences-list'),
-    
+
     path(
         'my-experiences/<int:user_id>/',
         my_experiences,
@@ -32,6 +32,6 @@ urlpatterns = [
         name='experience-detail'),
 
     path('delete-experience/<int:exp_id>',
-        delete_experience,
-        name='delete-experience'),
+         delete_experience,
+         name='delete-experience'),
 ]
