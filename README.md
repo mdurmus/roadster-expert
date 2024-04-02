@@ -92,6 +92,8 @@ You can find my web site [Roadster Expert](https://roadster-expert-07714854e0e0.
 5. Delete user's experiences that was posted previously.
 6. Change the website permissions for a user.
 
+[Full User Stories](https://github.com/users/mdurmus/projects/6)
+
 [Content Table](#content-table)
 
 ## Agile Methodology
