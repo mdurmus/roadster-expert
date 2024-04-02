@@ -15,6 +15,8 @@ You can find [here](README.md) main readme file.
 
 ## Manual Testing
 
+![Manual Test Result](/assets/manual_Test.png "Manual Test Result")
+
 [Manual Test Result](https://docs.google.com/spreadsheets/d/1FFb9x46S-sRSw2KCKdNDCbpSLUJEDHrd/edit?usp=drive_link&ouid=117671076170825861177&rtpof=true&sd=true)
 
 [Content](#content)
