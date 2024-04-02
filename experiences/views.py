@@ -69,6 +69,7 @@ def create_experience(request):
             experience = form.save(commit=False)
             experience.user = request.user
             experience.save()
+            messages.success(request,"Your experience creates successfully.")
             return redirect('experiences-list')
     else:
         form = ExperienceForm()
@@ -93,6 +94,7 @@ def update_experience(request, exp_id):
         form = UpdateExperienceForm(request.POST, instance=experience)
         if form.is_valid():
             form.save()
+            messages.success(request,"Your experience updated successfully.")
             return redirect('experience-detail', exp_id=exp_id)
     else:
         form = UpdateExperienceForm(instance=experience)
