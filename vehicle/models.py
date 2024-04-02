@@ -107,7 +107,7 @@ class Vehicle(models.Model):
 
     featured_image = CloudinaryField('image', default='placeholder')
 
-    status = models.IntegerField(choices=STATUS, default=0)
+    status = models.IntegerField(choices=STATUS, default=1)
 
     likes = models.ManyToManyField(
                                    User,
