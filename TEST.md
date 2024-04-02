@@ -2,15 +2,29 @@
 The Testing.md file provides a comprehensive overview of the tests conducted on the Roadster Expert website. It covers code validation, accessibility, performance, testing on various devices, browser compatibility, testing of user stories, and improvements. Each section describes the tools used, any issues identified (if applicable), and the corresponding test results.
 You can find [here](README.md) main readme file.
 
+## Content
+
+*   [Pep8 Validation](#pep8-validation)
+*   [Google Lighthouse](#google-lighthouse)
+*   [Html Validation](#html-validation)
+*   [JS Validator](#js-validator)
+*   [CSS Validator](#css-validator)
+*   [Error Pages](#error-pages)
+*   [Bugs](#bugs)
+
 ## Pep8 Validation
 
 The PEP8 compliance check for both applications (Experiences and Vehicle) has been completed successfully without any errors.
+
+[Content](#content)
 
 ## Google Lighthouse
 
 ![Google Lighthouse Result](/assets/validators/light_mobile.jpg "Google Lighthouse Result")
 
 The image above displays the mobile device result of Google Lighthouse.
+
+[Content](#content)
 
 ## Html Validation
 
@@ -46,15 +60,21 @@ The image above displays the mobile device result of Google Lighthouse.
 
 ![Sign Out](/assets/validators/html/logout.png "Sign Out")
 
+[Content](#content)
+
 ## JS Validator 
 
 ![Email JS](/assets/validators/sendMailJs.png "Email JS")
 
 ![Roadster JS](/assets/validators/roadster_js.png "Roadster JS")
 
+[Content](#content)
+
 ## CSS Validator
 
 ![Roadster CSS](/assets/validators/css_validator.png "Roadster CSS")
+
+[Content](#content)
 
 ## Error Pages
 
@@ -64,8 +84,18 @@ In case of an HTTP 500 error, the server encounters an internal error and is una
 
 [404 Pages](README.md#404-page) | [500Pages](README.md#500-page)
 
+[Content](#content)
 
+## Bugs
 
+### Fixed Bugs
 
+#### All Vehicle Menu
 
+The menu categorizing vehicles. When I started the project, there was no issue because only the home page was set up, and the category information was included in the context. However, I noticed that the menu was missing when I added About and Contact pages. After some research, I came across this article in the source [Context Processor](https://docs.djangoproject.com/en/5.0/ref/templates/api/). Now the menu works perfectly fine; when you add a new category, you can see it in the All Vehicle menu.
 
+#### Profile Menu
+
+My esteemed mentor, Mr. Antonio Rodriguez, informed me during testing that there was an issue with the Profile screen, specifically reporting a "No Profile" error. As a result of my research, I understood that I needed to implement the Signal structure available in Django and establish this relationship between User and Profile. After establishing this relationship, everything went smoothly!
+
+[Content](#content)
