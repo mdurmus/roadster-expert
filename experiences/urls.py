@@ -20,7 +20,7 @@ urlpatterns = [
         'experiences/',
         ExperienceList.as_view(),
         name='experiences-list'),
-
+    
     path(
         'my-experiences/<int:user_id>/',
         my_experiences,
