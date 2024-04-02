@@ -131,8 +131,7 @@
           <div>
             <span>{{ comment.name }} | </span>
             <span><i class="fas fa-clock"></i> {{ comment.created_on | timesince }}</span>
-            <div class="user-comment">
-              <p class="user-comment-title"></p>
+            <div>
               <p class="mt-3 w-50">{{ comment.comment | safe }}</p>
             </div>
           </div>
