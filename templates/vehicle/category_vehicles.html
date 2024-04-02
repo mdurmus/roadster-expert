@@ -19,7 +19,7 @@
                <div class="card-body">
                   <h5 class="card-title">{{ vehicle.title }}</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="{% url 'vehicle-detail' slug=vehicle.slug %}" class="btn btn-primary">Go somewhere</a>
+                  <a href="{% url 'vehicle-detail' slug=vehicle.slug %}" class="btn btn-primary">Details</a>
                </div>
                <div class="card-footer">
                   <i class="fa-solid fa-gauge-high" style="color: #bd0000;"></i> {{vehicle.max_speed}} mph 
