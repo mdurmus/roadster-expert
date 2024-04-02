@@ -14,7 +14,7 @@ You can find [here](README.md) main readme file.
 
 ## Pep8 Validation
 
-The PEP8 compliance check for both applications (Experiences and Vehicle) has been completed successfully without any errors.
+The PEP8 compliance check for all .py files within the Experiences and Vehicles applications has been successfully completed without any errors.
 
 [Content](#content)
 
