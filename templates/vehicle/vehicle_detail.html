@@ -111,9 +111,9 @@
             <h4 class="mt-2">Leave a Comment</h4>
             <p>Posting as: <strong>{{ user.username | slice:":10"}}</strong></p>
             {% if user.profile.image %}
-            <img src="{{ user.profile.image.url }}" style="width: 200px; height:auto" alt="User Image">
+              <img class="profile-user-img" src="{{ user.profile.image.url }}" style="width:250px;" alt="User Image"/>
             {% else %}
-            <img src="{% static 'images/small-img/user_profile_placeholder.jpg' %}" style="width: 200px; height:auto" alt="User Image">
+             <img class=" profile-user-img" src="https://res.cloudinary.com/dpg6ubeyo/image/upload/v1711876938/nocar_avaxjp.jpg" style="width:250px; height:auto;" alt="No User Image" />
             {% endif %}
             <form method="post">
               {% csrf_token %}

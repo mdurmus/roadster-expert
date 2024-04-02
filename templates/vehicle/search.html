@@ -9,6 +9,7 @@
    </div>
    <div class="container">
       <div class="row">
+         {% if search_results %}
          {% for vehicle in search_results %}
          <div class="card mb-3 col-xs-12 col-md-3 col-lg-12">
             <div class="row g-0">
@@ -31,7 +32,14 @@
             </div>
          </div>
          {% endfor %}
-      </div>
+         {% else %}
+         <div class="col-xs-12 col-md-3 col-lg-12">
+         <div class="alert alert-danger" role="alert">
+            I think something went wrong and I couldn't find what you're looking for. Could you please try again with different words?
+          </div>
+          </div>
+         {% endif %}
+      </div> 
    </div>
 </section>
 <!--End of search result section-->
