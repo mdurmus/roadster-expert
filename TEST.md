@@ -62,7 +62,7 @@ I have included pages to handle HTTP errors with status codes 400 and 505 in my 
 
 In case of an HTTP 500 error, the server encounters an internal error and is unable to handle the request properly. This could occur due to various reasons such as bugs in the server-side code, database connection issues, or insufficient server resources. In such situations, users may encounter a generic error page indicating that something has gone wrong on the server side.
 
-[404 Pages](README.md#404-page) | [500Pages]((README.md#500-page))
+[404 Pages](README.md#404-page) | [500Pages](README.md#500-page)
 
 
 

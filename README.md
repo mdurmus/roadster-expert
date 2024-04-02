@@ -295,7 +295,7 @@ This is the page where registered users update their information.
 
 ### 500 Page
 
-![Roadster Expert 500 Page](/assets/pages/404.jpg "Roadster Expert 500 Page")
+![Roadster Expert 500 Page](/assets/pages/500.jpg "Roadster Expert 500 Page")
 
 [Content Table](#content-table)
 
