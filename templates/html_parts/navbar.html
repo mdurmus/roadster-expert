@@ -73,6 +73,9 @@
                   <li class="nav-item text-center">
                      <a class="nav-link" href="{% url 'my-profile' %}"> <i class="fa-regular fa-address-card"></i><br>{{user.username}}</a>
                   </li>
+                  <li class="nav-item text-center" style="line-height: 50px;">
+                     <i class="fa-solid fa-ellipsis-vertical" style="color: #0d71fd;"></i>
+                  </li>
                   <li class="nav-item text-center">
                      <a class="nav-link" href="{% url 'account_logout' %}"> <i class="fa-solid fa-right-from-bracket"></i><br>Logout</a>
                   </li>
