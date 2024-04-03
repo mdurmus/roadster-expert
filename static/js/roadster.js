@@ -1,7 +1,7 @@
 $(document).ready(function(){
     setTimeout(function(){
         $('#msg').alert('close');
-    }, 2500);
+    }, 6000);
 });
 
 $(document).ready(function(){

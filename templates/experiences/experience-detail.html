@@ -10,7 +10,10 @@
       <div class="col-md-12 mb-3">
          {% if request.user.id == experience.user.id %}
          <a href="{% url 'update-experience' exp_id=experience.id %}" class="btn btn-block btn-warning">Update this experience</a>
-         <a href="{% url 'delete-experience' exp_id=experience.id %}" class="btn btn-block btn-danger">Delete this experience</a>
+         
+         <button type="button" class="btn btn-block btn-danger" data-bs-toggle="modal"
+         data-bs-target="#delete-experience">Delete</button>
+         
          <a href="#" class="btn btn-block btn-primary" onclick="alert('This feature will be available soon.')">Send this your friend</a>
          {% endif %}
       </div>
@@ -85,4 +88,24 @@
    </div>
 </section>
 <!--End of Experience detail section-->
+
+<!--Delete Experience Modal-->
+<div class="modal fade" id="delete-experience" tabindex="-1" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-center">
+     <div class="modal-content bg-light">
+       <div class="modal-header">
+         <h5 class="modal-title" id="staticBackdropLabel" style="color:#e01a1a;">Delete Experience</h5>
+       </div>
+       <div class="modal-body" style="font-weight: bold;">
+         <p>Are you sure you want to delete your experience?</p>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+         <a href="{% url 'delete-experience' exp_id=experience.id %}" class="btn btn-danger"
+           aria-label="Delete Comment">Delete</a>
+       </div>
+     </div>
+   </div>
+</div>
+<!--End of Delete Experience Modal-->
 {% endblock %}
