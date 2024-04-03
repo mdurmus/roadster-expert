@@ -130,8 +130,6 @@ All the features and development of this project were overseen through GitHub, w
 
 ![Roadster Color Palette](/assets/roadster_color_palette.jpg "Roadster Color Palette")
 
-[Content Table](#content-table)
-
 I tried to benefit from approaches that describe the language of colors in my color selection.
 
 [Content Table](#content-table)
@@ -426,8 +424,6 @@ I want to add a favorite feature where logged-in users can add their own vehicle
 
 - [Python](https://www.python.org "Python Offical")
 
-- [Duck Duck Go](https://duckduckgo.com)
-
 [Content Table](#content-table)
 
 ### Django Packages
@@ -452,6 +448,9 @@ I want to add a favorite feature where logged-in users can add their own vehicle
 
 - [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
    To style the forms
+
+[Content Table](#content-table)
+
 
 ## Framework - Libraries - Programs
 
@@ -497,6 +496,8 @@ I want to add a favorite feature where logged-in users can add their own vehicle
 - [Emailjs](https://www.emailjs.com/)
    To send emails from the contact form
 
+[Content Table](#content-table)
+
 # Creating the Django app
 
 + Go to the Code Institute Gitpod Full Template Template
@@ -540,7 +541,7 @@ I want to add a favorite feature where logged-in users can add their own vehicle
 
 # Final Deployment
 
-+ Create a runtime.txt **python-3.8.13**
++ Create a runtime.txt **python-3.12.2**
 + Create a Procfile `web: gunicorn your_project_name.wsgi`
 + When development is complete change the debug setting to: `DEBUG = False` in settings.py
 + In this project the summernote editor was used so for this to work in Heroku add: `X_FRAME_OPTIONS = SAMEORIGIN` to settings.py.
