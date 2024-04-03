@@ -276,10 +276,10 @@ This is the page where registered users update their information.
 
 ### Navbar
 
-![Roadster Expert Navbar](/assets/pages/navbarDesktop.jpg "Roadster Expert Navbar")
-![Roadster Expert Navbar](/assets/pages/navbarMobile.jpg "Roadster Expert Navbar")
-![Roadster Expert Navbar](/assets/pages/navbarUser.jpg "Roadster Expert Navbar")
-![Roadster Expert Navbar](/assets/pages/navbarVehicles.jpg "Roadster Expert Navbar")
+![Roadster Expert Desktop Navbar](/assets/pages/navbarDesktop.jpg "Roadster Expert Desktop Navbar")
+![Roadster Expert Mobile Navbar](/assets/pages/navbarMobile.jpg "Roadster Mobile Navbar")
+![Roadster Expert User Navbar](/assets/pages/navbarUser.jpg "Roadster Expert User Navbar")
+![Roadster Expert Vehicles Navbar](/assets/pages/navbarVehicles.jpg "Roadster Expert Vehicles Navbar")
 
 [Content Table](#content-table)
 
