@@ -6,7 +6,7 @@
 <!--Car detail section-->
 <section class="section-margin">
   <div class="container">
-    <p class="fs-5 lh-base mt-3">{{vehicle.summary | safe}}</p>
+    <div>{{vehicle.summary | safe}}</div>
     <!--Vehicle image-->
     <div class="row mt-5 text-center">
       <div class="col-md-12">
@@ -92,7 +92,7 @@
     <!--End of Vehicle Image-->
     <!--Vehicle Detail Text-->
     <div class="row">
-      <p>{{vehicle.content | safe}}</p>
+      <div>{{vehicle.content | safe}}</div>
     </div>
     <!--End of Vehicle Detail Text-->
     <!--Comments Area-->
