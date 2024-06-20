@@ -31,14 +31,14 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['8000-mdurmus-roadsterexpert-uq91yxq6suu.ws-eu110.gitpod.io',
+ALLOWED_HOSTS = ['8000-mdurmus-roadsterexpert-97ksgb09ikc.ws-eu114.gitpod.io',
                  '.herokuapp.com']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-mdurmus-roadsterexpert-uq91yxq6suu.ws-eu110.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-mdurmus-roadsterexpert-97ksgb09ikc.ws-eu114.gitpod.io']
 
 
 # Application definition

@@ -4,6 +4,7 @@ from .models import Experience
 from .forms import ExperienceForm, UpdateExperienceForm
 from django.contrib import messages
 from django.urls import reverse
+from django.contrib.auth.decorators import login_required
 
 
 class ExperienceList(generic.ListView):
@@ -16,6 +17,10 @@ class ExperienceList(generic.ListView):
 
     context_object_name = 'experiences'
 
+    @login_required
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
+
     def get_queryset(self):
         user = self.request.user
         return Experience.objects.filter(approved=True) \
@@ -27,7 +32,7 @@ class ExperienceList(generic.ListView):
         context['page_name'] = 'All Experiences'
         return context
 
-
+@login_required
 def my_experiences(request, user_id):
     """
     View displaying logged-in user experiences.
@@ -43,7 +48,7 @@ def my_experiences(request, user_id):
         }
     )
 
-
+@login_required
 def experience_detail(request, exp_id):
     """
     View displaying the details of a single experience.
@@ -58,7 +63,7 @@ def experience_detail(request, exp_id):
         }
     )
 
-
+@login_required
 def create_experience(request):
     """
     View for creating a new user experience.
@@ -83,7 +88,7 @@ def create_experience(request):
         }
     )
 
-
+@login_required
 def update_experience(request, exp_id):
     """
     View for updating an existing user experience.
@@ -108,7 +113,7 @@ def update_experience(request, exp_id):
         }
     )
 
-
+@login_required
 def delete_experience(request, exp_id):
     """
     Delete Experience
