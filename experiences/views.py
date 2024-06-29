@@ -5,21 +5,21 @@ from .forms import ExperienceForm, UpdateExperienceForm
 from django.contrib import messages
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
-class ExperienceList(generic.ListView):
+class ExperienceList(LoginRequiredMixin, generic.ListView):
     """
     View for listing approved user experiences,
     excluding the experiences of the current user.
     """
     model = Experience
     template_name = 'experiences/experience_list.html'
-
     context_object_name = 'experiences'
 
-    @login_required
-    def dispatch(self, *args, **kwargs):
-        return super().dispatch(*args, **kwargs)
+    #@login_required
+    #def dispatch(self, *args, **kwargs):
+    #    return super().dispatch(*args, **kwargs)
 
     def get_queryset(self):
         user = self.request.user
